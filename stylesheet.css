@@ -38,7 +38,7 @@ body{
   
   .hero-heading { grid-area: hero-heading; }
   
-  .nav-links {  display: grid;
+  .nav-links {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
     gap: 0px 0px;
@@ -46,6 +46,10 @@ body{
     grid-template-areas:
       "nav-link1 nav-link2 nav-link3 nav-link4 nav-link5 nav-link6";
     grid-area: nav-links;
+    display: inline-grid;
+    justify-items: center;
+    text-align: center;
+    padding: 1rem;
   }
   
   .nav-link1 { grid-area: nav-link1; }
