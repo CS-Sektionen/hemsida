@@ -1,4 +1,11 @@
-.container {  display: grid;
+@charset "UTF-8";
+body{
+    font-family: 'Poppins';
+    margin: 0;
+}
+
+.container {  
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     gap: 0px 0px;
@@ -21,8 +28,15 @@
       "nav-link1 nav-link2 nav-link3 nav-link4 nav-link5 nav-link6";
     grid-area: nav;
   }
+
+  .nav a {
+      text-transform: uppercase;
+  }
   
-  .nav-link1 { grid-area: nav-link1; }
+  .nav-link1 { 
+      grid-area: nav-link1; 
+
+    }
   
   .nav-link2 { grid-area: nav-link2; }
   
