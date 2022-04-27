@@ -11,7 +11,6 @@ body{
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "nav"
       "hero-img"
       "about"
       "social-media"
@@ -19,24 +18,37 @@ body{
       "footer";
   }
   
-  .nav {  display: grid;
-    grid-template-columns: repeat(6, 1fr);
+  .hero-img {  
+    display: grid;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "nav-link1 nav-link2 nav-link3 nav-link4 nav-link5 nav-link6";
-    grid-area: nav;
-  }
-
-  .nav a {
-      text-transform: uppercase;
+      "nav-links nav-links nav-links nav-links nav-links nav-links"
+      ". . . hero-heading hero-heading hero-heading"
+      ". . . hero-heading hero-heading hero-heading";
+    grid-area: hero-img;
+    background-image: url(/images/hero.png);
+    height: 70vh;
+    width: 100vw;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+    color: white;
   }
   
-  .nav-link1 { 
-      grid-area: nav-link1; 
-
-    }
+  .hero-heading { grid-area: hero-heading; }
+  
+  .nav-links {  display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav-link1 nav-link2 nav-link3 nav-link4 nav-link5 nav-link6";
+    grid-area: nav-links;
+  }
+  
+  .nav-link1 { grid-area: nav-link1; }
   
   .nav-link2 { grid-area: nav-link2; }
   
@@ -48,24 +60,7 @@ body{
   
   .nav-link6 { grid-area: nav-link6; }
   
-  .hero-img {  display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      ". hero-heading";
-    grid-area: hero-img;
-  }
-
-  .hero-img img{
-    top: 0;
-    width: 100vw;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 77%);
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 77%);
-  }
   
-  .hero-heading { grid-area: hero-heading; }
   
   .about {  display: grid;
     grid-template-columns: repeat(2, 1fr);
