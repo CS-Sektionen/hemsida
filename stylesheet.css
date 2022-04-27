@@ -1,0 +1,141 @@
+.container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav"
+      "hero-img"
+      "about"
+      "social-media"
+      "contact"
+      "footer";
+  }
+  
+  .nav {  display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav-link1 nav-link2 nav-link3 nav-link4 nav-link5 nav-link6";
+    grid-area: nav;
+  }
+  
+  .nav-link1 { grid-area: nav-link1; }
+  
+  .nav-link2 { grid-area: nav-link2; }
+  
+  .nav-link3 { grid-area: nav-link3; }
+  
+  .nav-link4 { grid-area: nav-link4; }
+  
+  .nav-link5 { grid-area: nav-link5; }
+  
+  .nav-link6 { grid-area: nav-link6; }
+  
+  .hero-img {  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". hero-heading";
+    grid-area: hero-img;
+  }
+  
+  .hero-heading { grid-area: hero-heading; }
+  
+  .about {  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "about-logos about-text"
+      "about-ntk about-logo";
+    grid-area: about;
+  }
+  
+  .about-text { grid-area: about-text; }
+  
+  .about-logos {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "about-logos-c"
+      "about-logos-dv"
+      "about-logos-id";
+    grid-area: about-logos;
+  }
+  
+  .about-logos-c { grid-area: about-logos-c; }
+  
+  .about-logos-dv { grid-area: about-logos-dv; }
+  
+  .about-logos-id { grid-area: about-logos-id; }
+  
+  .about-ntk { grid-area: about-ntk; }
+  
+  .about-logo { grid-area: about-logo; }
+  
+  .social-media {  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "social-media-heading social-media-heading"
+      "social-media-fb social-media-ig"
+      "social-media-discord social-media-orbi";
+    grid-area: social-media;
+  }
+  
+  .social-media-heading { grid-area: social-media-heading; }
+  
+  .social-media-fb { grid-area: social-media-fb; }
+  
+  .social-media-ig { grid-area: social-media-ig; }
+  
+  .social-media-discord { grid-area: social-media-discord; }
+  
+  .social-media-orbi { grid-area: social-media-orbi; }
+  
+  .contact {  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "contact-text contact-text"
+      "contact-company contact-other";
+    grid-area: contact;
+  }
+  
+  .contact-text { grid-area: contact-text; }
+  
+  .contact-company { grid-area: contact-company; }
+  
+  .contact-other { grid-area: contact-other; }
+  
+  .footer {  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "footer-links footer-credits footer-contact"
+      "footer-copyright footer-copyright footer-copyright";
+    grid-area: footer;
+  }
+  
+  .footer-links { grid-area: footer-links; }
+  
+  .footer-credits { grid-area: footer-credits; }
+  
+  .footer-contact { grid-area: footer-contact; }
+  
+  .footer-copyright { grid-area: footer-copyright; }
+  
