@@ -263,10 +263,12 @@ margin-block-end: 1em;
   
   .footer-contact { 
     grid-area: footer-contact;
-    align-self: end; }
+    align-self: end; 
+  }
   
   .footer-copyright { 
     grid-area: footer-copyright; 
     padding-top: 10vh;
-  text-align: center;}
+    text-align: center;
+  }
   
