@@ -4,6 +4,14 @@ body{
     margin: 0;
 }
 
+h1{
+    font-size: 70px;
+}
+
+.hero-img h1 {
+    font-family: 'Raleway';
+}
+
 .container {  
     display: grid;
     grid-template-columns: 1fr;
@@ -16,6 +24,12 @@ body{
       "social-media"
       "contact"
       "footer";
+  }
+
+  .about, .social-media, .contact {
+      margin-left: 15vw;
+      margin-right: 15vw;
+      width: 70vw;
   }
   
   .hero-img {  
@@ -69,7 +83,7 @@ body{
   .about {  display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 0px 0px;
+    gap: 15vh 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "about-logos about-text"
