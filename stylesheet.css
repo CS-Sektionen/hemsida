@@ -281,71 +281,48 @@ margin-block-end: 1em;
   /*************SIDA NYA STUDENTER *************/
 
 
-  .container2 {  
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-    "hero-img2"
-    "description"
-    "sections"; 
-    grid-area: container2;
-  }
-
-  .hero-img2 {
-    display: flex; 
-    grid-auto-flow: row;
-    grid-template-columns: auto; 
-    grid-template-rows: auto; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "navlinks navlinks navlinks navlinks navlinks navlinks"
-      ". hero-heading2 hero-heading2 hero-heading2 hero-heading2 ."; 
-    grid-area: hero-img2; 
-    background-image: url(/images/hero-nyastudenter.png);
-    height: 50vh;
-    width: 100vw;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
-    color: white;
-  }
-
-  .nav-links2 {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "nav-link1_2 nav-link2_2 nav-link3_2 nav-link4_2 nav-link5_2 nav-link6_2";
-    grid-area: nav-links2;
-    display: inline-grid;
-    justify-items: center;
-    text-align: center;
-    padding: 1rem;
+ 
+    .container2 {  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+      "hero-img2"
+      "description"
+      "sections";
+    }
+    
+    .hero-img2 {  
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "nav-links nav-links nav-links nav-links nav-links nav-links"
+        ". hero-heading2 hero-heading2 hero-heading2 hero-heading2 .";
+      grid-area: hero-img2;
+      background-image: url(/images/hero-nyastudenter.png);
+      box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
+      height: 70vh;
+      width: 100vw;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+      color: white;
+    }
+    
+    .hero-heading2 { 
+      grid-area: hero-heading2;
+      text-align: center; 
   }
   
-  .nav-link1_2 { grid-area: nav-link1_2; }
-  
-  .nav-link2_2 { grid-area: nav-link2_2; }
-  
-  .nav-link3_2 { grid-area: nav-link3_2; }
-  
-  .nav-link4_2 { grid-area: nav-link4_2; }
-  
-  .nav-link5_2 { grid-area: nav-link5_2; }
-  
-  .nav-link6_2 { grid-area: nav-link6_2; }
-
-  .hero-heading2 { 
-    grid-area: hero-heading2;
-    text-align: center; 
-    padding-top: 7vh;
-    padding-right: 7vw;
-}
-
-  
-
+    .hero-heading h1{
+      margin-bottom: 0;
+      margin-top: 0;
+      line-height: 1;
+      text-align: center;
+    }
 
   .description, .sections {
     margin-left: 15vw;
@@ -363,17 +340,36 @@ margin-block-end: 1em;
   
   .sections {  
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "section1-img section1-txt"
-      "section2-txt section2-img"
-      "section3-img section3-txt"
-      "section4-txt section4-img"
-      "section5-img section5-txt";
+    "section"
+    "section";  
     grid-area: sections;
+  }
+
+  .section{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "section-img section-txt";
+    grid-area: section;
+
+  }
+
+  .section div:nth-child(even) {
+    background-color: red;
+    order:1;
+  }
+
+  .section div:nth-child(odd) {
+    background-color: blue;
+    order:2;
   }
   
   .section1-img { grid-area: section1-img; }
