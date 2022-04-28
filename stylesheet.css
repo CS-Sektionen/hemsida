@@ -5,7 +5,7 @@ body{
     line-height: 2;
 }
 
-h1{ font-size: 70px; }
+h1{ font-size: 60px; }
 h2{ font-size: 40px; }
 h3{ font-size: 30px; }
 h4{ font-size: 20px; }
@@ -58,7 +58,27 @@ h4{ font-size: 20px; }
     color: white;
   }
   
-  .hero-heading { grid-area: hero-heading; }
+  .hero-heading { 
+    grid-area: hero-heading;
+    text-align: center; 
+    padding-top: 7vh;
+    padding-right: 7vw;
+}
+
+  .hero-heading img{
+    width: 10vw;
+    margin-bottom: 0;
+  }
+
+  .hero-heading h1{
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+  }
+  .hero-heading h4{
+    margin-top: 0;
+    font-weight: 500;
+  }
   
   .nav-links {
     grid-template-columns: repeat(6, 1fr);
@@ -128,8 +148,12 @@ h4{ font-size: 20px; }
   .about-logos-id { grid-area: about-logos-id; }
   
   .about-ntk { 
-    grid-area: about-ntk; }
+    grid-area: about-ntk;}
   
+  .about-ntk h2{ 
+    color: black;
+  }
+    
   .about-logo { 
     grid-area: about-logo;
     display: flex;
@@ -202,7 +226,7 @@ h4{ font-size: 20px; }
   .contact-other { grid-area: contact-other; }
   
   .footer {  display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.5fr 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -220,11 +244,23 @@ h4{ font-size: 20px; }
     
   }
   
-  .footer-links { grid-area: footer-links; }
+  .footer-links { 
+    
+    grid-area: footer-links;
+    align-self: end; }
   
-  .footer-credits { grid-area: footer-credits; }
+  .footer-credits { 
+   
+    grid-area: footer-credits;
+    align-self: end; }
   
-  .footer-contact { grid-area: footer-contact; }
+  .footer-contact { 
+    
+    grid-area: footer-contact;
+    align-self: end; }
   
-  .footer-copyright { grid-area: footer-copyright; }
+  .footer-copyright { 
+    grid-area: footer-copyright; 
+    padding-top: 10vh;
+  text-align: center;}
   
