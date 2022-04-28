@@ -26,10 +26,16 @@ h1{
       "footer";
   }
 
-  .about, .social-media, .contact {
+  .about, .contact {
       margin-left: 15vw;
       margin-right: 15vw;
       width: 70vw;
+  }
+  .social-media, .footer{
+    padding-left: 15vw;
+      padding-right: 15vw;
+      width: 70vw;
+
   }
   
   .hero-img {  
@@ -81,17 +87,19 @@ h1{
   
   
   .about {  display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     gap: 15vh 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "about-logos about-text"
-      "about-ntk about-logo";
+      "about-logos about-text about-text"
+      "about-ntk about-ntk about-logo";
     grid-area: about;
   }
   
-  .about-text { grid-area: about-text; }
+  .about-text { 
+    grid-area: about-text; 
+  }
   
   .about-logos {  display: grid;
     grid-template-columns: 1fr;
@@ -111,9 +119,13 @@ h1{
   
   .about-logos-id { grid-area: about-logos-id; }
   
-  .about-ntk { grid-area: about-ntk; }
+  .about-ntk { 
+    grid-area: about-ntk; }
   
-  .about-logo { grid-area: about-logo; }
+  .about-logo { 
+    grid-area: about-logo;
+  }
+   
   
   .social-media {  display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -125,9 +137,16 @@ h1{
       "social-media-fb social-media-ig"
       "social-media-discord social-media-orbi";
     grid-area: social-media;
+    background-color: #15004F;
+  }
+
+  .social-media p, h2, h5, a{
+    color: white;
   }
   
-  .social-media-heading { grid-area: social-media-heading; }
+  .social-media-heading { 
+    grid-area: social-media-heading; 
+  text-align: center;}
   
   .social-media-fb { grid-area: social-media-fb; }
   
@@ -163,6 +182,12 @@ h1{
       "footer-links footer-credits footer-contact"
       "footer-copyright footer-copyright footer-copyright";
     grid-area: footer;
+    background-color: #EBD8BC;
+  }
+
+  .footer a{
+    color: black;
+    
   }
   
   .footer-links { grid-area: footer-links; }
