@@ -278,9 +278,15 @@ margin-block-end: 1em;
 
 
 
+
+
+
+
+
+
+
+
   /*************SIDA NYA STUDENTER *************/
-
-
  
     .container2 {  
       display: grid;
@@ -379,3 +385,101 @@ margin-block-end: 1em;
 
   
   
+
+
+
+
+
+
+
+    /*************SIDA NYA STUDENTER *************/
+    .container3 {  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+      "hero-img3"
+      "members"
+      "footer";
+    }
+    
+    .hero-img3 {  
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "nav-links nav-links nav-links nav-links nav-links nav-links"
+        ". hero-heading3 hero-heading3 hero-heading3 hero-heading3 .";
+      grid-area: hero-img3;
+      background-image: url(/images/hero-styrelsen.png);
+      box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
+      height: 70vh;
+      width: 100vw;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+      color: white;
+    }
+    
+    .hero-heading3 { 
+      grid-area: hero-heading3;
+      text-align: center; 
+  }
+
+  .hero-heading3 h1{
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .members {  
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 5vh 0px;
+    grid-template-areas:
+    ". . headingmembers headingmembers . ."
+    "ordf ordf vice vice sekr sekr"
+    "kassor kassor ubu ubu armu armu"
+    "infou infou stum stum idego idego"
+    ". cego cego dvego dvego .";
+    grid-area: members;
+    text-align: center;
+    margin-left: 15vw;
+      margin-right: 15vw;
+      width: 70vw;
+  }
+
+  .ordf{ grid-area: ordf; }
+  .vice{ grid-area: vice; }
+  .sekr{ grid-area: sekr; }
+  .kassor{ grid-area: kassor; }
+  .ubu{ grid-area: ubu; }
+  .armu{ grid-area: armu; }
+  .infou{ grid-area: infou; }
+  .stum{ grid-area: stum; }
+  .idego{ grid-area: idego; }
+  .cego{ grid-area: cego; }
+  .dvego{ grid-area: dvego; }
+  .headingmembers{ grid-area: headingmembers; }
+
+
+  .members h1, .members h5, .members a {
+    color: black;
+  }
+
+  .members h5 {
+    font-size: 15px;
+  }
+
+  .members h1 {
+    font-size: 50px;
+  }
+
+  .members h5, .members p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
