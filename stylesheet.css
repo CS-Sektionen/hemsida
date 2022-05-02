@@ -1,276 +1,430 @@
 @charset "UTF-8";
-body{
-    font-family: 'Poppins';
-    margin: 0;
-    line-height: 2;
+
+body {
+  font-family: 'Poppins';
+  margin: 0;
+  line-height: 2;
 }
 
-h1{ font-size: 60px; }
-h2{ font-size: 40px; }
-h3{ font-size: 30px; }
-h4{ font-size: 20px; }
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
 
 .hero-img h1, .hero-img2 h1 {
-    font-family: 'Raleway';
+  font-family: 'Raleway';
 }
 
-.container {  
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "hero-img"
-      "about"
-      "social-media"
-      "contact"
-      "footer";
-  }
-
-  .about, .contact {
-      margin-left: 15vw;
-      margin-right: 15vw;
-      width: 70vw;
-  }
-  .social-media, .footer{
-    padding-left: 15vw;
-      padding-right: 15vw;
-      width: 70vw;
-
-  }
-  
-  .hero-img {  
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "nav-links nav-links nav-links nav-links nav-links nav-links"
-      ". . . hero-heading hero-heading hero-heading"
-      ". . . hero-heading hero-heading hero-heading";
-    grid-area: hero-img;
-    background-image: url(/images/hero.png);
-    height: 70vh;
-    width: 100vw;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
-    color: white;
-  }
-  
-  .hero-heading { 
-    grid-area: hero-heading;
-    text-align: center; 
-    padding-top: 7vh;
-    padding-right: 7vw;
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "hero-img"
+    "about"
+    "social-media"
+    "contact"
+    "footer";
 }
 
-  .hero-heading img{
-    width: 10vw;
-    margin-bottom: 0;
-  }
+.about, .contact {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  width: 70vw;
+}
 
-  .hero-heading h1{
-    margin-bottom: 0;
-    margin-top: 0;
-    line-height: 1;
-  }
-  .hero-heading h4{
-    margin-top: 0;
-    font-weight: 500;
-  }
-  
-  .nav-links {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "nav-link1 nav-link2 nav-link3 nav-link4 nav-link5 nav-link6";
-    grid-area: nav-links;
-    display: inline-grid;
-    justify-items: center;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .nav-link1 { grid-area: nav-link1; }
-  
-  .nav-link2 { grid-area: nav-link2; }
-  
-  .nav-link3 { grid-area: nav-link3; }
-  
-  .nav-link4 { grid-area: nav-link4; }
-  
-  .nav-link5 { grid-area: nav-link5; }
-  
-  .nav-link6 { grid-area: nav-link6; }
-  
-  
-  
-  .about {  display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 10vh 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "about-logos about-text about-text"
-      "about-ntk about-ntk about-logo";
-    grid-area: about;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
-  }
-  
-  .about-text { 
-    grid-area: about-text; 
-  }
+.social-media, .footer {
+  padding-left: 15vw;
+  padding-right: 15vw;
+  width: 70vw;
 
-  .about-text h2 {
-      color: black;
-  }
-  
-  .about-logos {  display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 5vh 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "about-logos-c"
-      "about-logos-dv"
-      "about-logos-id";
-    grid-area: about-logos;
-  }
-  
-  .about-logos-c { grid-area: about-logos-c; }
-  
-  .about-logos-dv { grid-area: about-logos-dv; }
-  
-  .about-logos-id { grid-area: about-logos-id; }
-  
-  .about-ntk { 
-    grid-area: about-ntk;}
-  
-  .about-ntk h2{ 
-    color: black;
-  }
-    
-  .about-logo { 
-    grid-area: about-logo;
-    display: flex;
+}
+
+.hero-img {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav-links nav-links nav-links nav-links nav-links nav-links"
+    ". . . hero-heading hero-heading hero-heading"
+    ". . . hero-heading hero-heading hero-heading";
+  grid-area: hero-img;
+  background-image: url(/images/hero.png);
+  height: 70vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+  color: white;
+}
+
+.hero-heading {
+  grid-area: hero-heading;
+  text-align: center;
+  padding-top: 7vh;
+  padding-right: 7vw;
+}
+
+.hero-heading img {
+  width: 10vw;
+  margin-bottom: 0;
+}
+
+.hero-heading h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.hero-heading h4 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.nav-links {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav-link1 nav-link2 nav-link3 nav-link4 nav-link5 nav-link6";
+  grid-area: nav-links;
+  display: inline-grid;
+  justify-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.nav-link1 {
+  grid-area: nav-link1;
+}
+
+.nav-link2 {
+  grid-area: nav-link2;
+}
+
+.nav-link3 {
+  grid-area: nav-link3;
+}
+
+.nav-link4 {
+  grid-area: nav-link4;
+}
+
+.nav-link5 {
+  grid-area: nav-link5;
+}
+
+.nav-link6 {
+  grid-area: nav-link6;
+}
+
+
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 10vh 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "about-logos about-text about-text"
+    "about-ntk about-ntk about-logo";
+  grid-area: about;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+}
+
+.about-text {
+  grid-area: about-text;
+}
+
+.about-text h2 {
+  color: black;
+}
+
+.about-logos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5vh 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "about-logos-c"
+    "about-logos-dv"
+    "about-logos-id";
+  grid-area: about-logos;
+}
+
+.about-logos-c {
+  grid-area: about-logos-c;
+}
+
+.about-logos-dv {
+  grid-area: about-logos-dv;
+}
+
+.about-logos-id {
+  grid-area: about-logos-id;
+}
+
+.about-ntk {
+  grid-area: about-ntk;
+}
+
+.about-ntk h2 {
+  color: black;
+}
+
+.about-logo {
+  grid-area: about-logo;
+  display: flex;
   justify-content: center;
   align-items: center;
-  }
-   
-  
-  .social-media {  display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "social-media-heading social-media-heading"
-      "social-media-fb social-media-ig"
-      "social-media-discord social-media-orbi";
-    grid-area: social-media;
-    background-color: #15004F;
-  }
-
-  .social-media p, h2, h5, a{
-    color: white;
-  }
-  
-  .social-media-heading { 
-    grid-area: social-media-heading; 
-    text-align: center;
 }
 
-  .social-media-fb, .social-media-ig, .social-media-discord, .social-media-orbi{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-  }
+/*CENTRERAAAAAAA!!!!!!!!!*/
+.social-media {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 5vw 5vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "social-media-heading social-media-heading"
+    "social-media-fb social-media-ig"
+    "social-media-discord social-media-orbi";
+  grid-area: social-media;
+  background-color: #15004F;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  align-content: center;
+}
 
-  .social-media-fb { grid-area: social-media-fb; }
-  
-  .social-media-ig { grid-area: social-media-ig; }
-  
-  .social-media-discord { grid-area: social-media-discord; }
-  
-  .social-media-orbi { grid-area: social-media-orbi; }
-  
-  .contact {  
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "contact-text contact-text"
-      "contact-company contact-other";
-    grid-area: contact;
-    text-align: center;
-    margin-top: 10vh;
-  }
-  
-  .contact-text { 
-      grid-area: contact-text; 
-    }
+.social-media p, h2, h5, a {
+  color: white;
+}
+
+.social-media-heading {
+  grid-area: social-media-heading;
+  text-align: center;
+}
+
+.social-media-fb {
+  grid-area: social-media-fb;
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 2vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo-fb fb-heading"
+    "logo-fb fb-link";
+}
+
+.logo-fb {
+  grid-area: logo-fb;
+  font-size: 40px;
+  color: white;
+}
+
+.fb-heading {
+  grid-area: fb-heading;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.fb-link {
+  grid-area: fb-link;
+}
+
+
+.social-media-ig {
+  grid-area: social-media-ig;
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 2vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo-ig ig-heading"
+    "logo-ig ig-link";
+}
+
+.logo-ig {
+  grid-area: logo-ig;
+  font-size: 40px;
+  color: white;
+}
+
+.ig-heading {
+  grid-area: ig-heading;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.ig-link {
+  grid-area: ig-link;
+}
+
+
+
+.social-media-discord {
+  grid-area: social-media-discord;
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 2vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo-discord discord-heading"
+    "logo-discord discord-link";
+}
+
+.logo-discord {
+  grid-area: logo-discord;
+  font-size: 40px;
+  color: white;
+}
+
+.discord-heading {
+  grid-area: discord-heading;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.discord-link {
+  grid-area: discord-link;
+}
+
+
+
+.social-media-orbi {
+  grid-area: social-media-orbi;
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 2vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo-orbi orbi-heading"
+    "logo-orbi orbi-link";
+}
+
+.logo-orbi {
+  grid-area: logo-orbi;
+  font-size: 40px;
+  color: white;
+}
+
+.orbi-heading {
+  grid-area: orbi-heading;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.orbi-link {
+  grid-area: orbi-link;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5vh 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "contact-text contact-text"
+    "contact-company contact-other";
+  grid-area: contact;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.contact-text {
+  grid-area: contact-text;
+}
 
 .contact-text h2, .contact a, .contact h4 {
-    color: black;
-}
-  
-  .contact-company { grid-area: contact-company; }
-  
-  .contact-other { grid-area: contact-other; }
-  
-  .footer {  display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: 0px 5vw;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "footer-links footer-credits footer-contact"
-      "footer-copyright footer-copyright footer-copyright";
-    grid-area: footer;
-    background-color: #EBD8BC;
-    clip-path: polygon(0 0, 100% 21%, 100% 100%, 0% 100%);
-    padding-top: 20vh;
-  }
-
-  .footer a{
-    color: black;
-    
-  }
-  
-  .footer-links { 
-    grid-area: footer-links;
-    align-self: end; 
+  color: black;
 }
 
-.footer-links a { 
-    display: block;
-margin-block-start: 1em;
-margin-block-end: 1em;
+.contact-company {
+  grid-area: contact-company;
 }
-  
-  .footer-credits { 
-   
-    grid-area: footer-credits;
-    align-self: end;
- }
-  
-  .footer-contact { 
-    grid-area: footer-contact;
-    align-self: end; 
-  }
-  
-  .footer-copyright { 
-    grid-area: footer-copyright; 
-    padding-top: 10vh;
-    text-align: center;
-  }
+
+.contact-company h2, .contact-company h4, .contact-company a {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.contact-other h2, .contact-other h4, .contact-other a {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.contact-other {
+  grid-area: contact-other;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 0px 5vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "footer-links footer-credits footer-contact"
+    "footer-copyright footer-copyright footer-copyright";
+  grid-area: footer;
+  background-color: #EBD8BC;
+  clip-path: polygon(0 0, 100% 21%, 100% 100%, 0% 100%);
+  padding-top: 20vh;
+  padding-bottom: 5vh;
+}
+
+.footer a, .footer p {
+  color: black;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  line-height: 2;
+}
+
+.footer-links {
+  grid-area: footer-links;
+  align-self: end;
+}
+
+.footer-credits {
+  grid-area: footer-credits;
+  align-self: end;
+}
+
+.footer-contact {
+  grid-area: footer-contact;
+  align-self: end;
+}
+
+.footer-copyright {
+  grid-area: footer-copyright;
+  padding-top: 10vh;
+  text-align: center;
+}
 
 
 
@@ -286,106 +440,104 @@ margin-block-end: 1em;
 
 
 
-  /*************SIDA NYA STUDENTER *************/
- 
-    .container2 {  
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      gap: 0px 0px;
-      grid-auto-flow: row;
-      grid-template-areas:
-      "hero-img2"
-      "description"
-      "sections"
-      "footer";
-    }
-    
-    .hero-img2 {  
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      gap: 0px 0px;
-      grid-auto-flow: row;
-      grid-template-areas:
-        "nav-links nav-links nav-links nav-links nav-links nav-links"
-        ". hero-heading2 hero-heading2 hero-heading2 hero-heading2 .";
-      grid-area: hero-img2;
-      background-image: url(/images/hero-nyastudenter.png);
-      box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
-      height: 70vh;
-      width: 100vw;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
-      color: white;
-    }
-    
-    .hero-heading2 { 
-      grid-area: hero-heading2;
-      text-align: center; 
-  }
-  
-    .hero-heading h1{
-      margin-bottom: 0;
-      margin-top: 0;
-      line-height: 1;
-      text-align: center;
-    }
+/*************SIDA NYA STUDENTER *************/
 
-  .description, .sections {
-    margin-left: 15vw;
-    margin-right: 15vw;
-    width: 70vw;
-  }
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "hero-img2"
+    "description"
+    "sections"
+    "footer";
+}
 
-  .description { 
-      grid-area: description; 
-      margin-bottom: 5vw;
-    }
+.hero-img2 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav-links nav-links nav-links nav-links nav-links nav-links"
+    ". hero-heading2 hero-heading2 hero-heading2 hero-heading2 .";
+  grid-area: hero-img2;
+  background-image: url(/images/hero-nyastudenter.png);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
+  height: 70vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+  color: white;
+}
 
-    .description h2 {
-        color: black;
-    }
-  
-  .sections {  
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-    gap: 10vh;
-    margin-top: 5vh;
-  }
+.hero-heading2 {
+  grid-area: hero-heading2;
+  text-align: center;
+}
 
-  .section-l {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-  }
+.hero-heading h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1;
+  text-align: center;
+}
 
-  .section-r{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-  }
+.description, .sections {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  width: 70vw;
+}
 
-  .section-l div:nth-child(even) {
-    margin-left: 5vw;
-  }
+.description {
+  grid-area: description;
+  margin-bottom: 5vw;
+}
 
-  .section-r div:nth-child(even) {
-    order:1;
-    margin-right: 5vw;
-  }
+.description h2 {
+  color: black;
+}
 
-  .section-r div:nth-child(odd)  {
-    order:2;
-  }
+.sections {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 10vh;
+  margin-top: 5vh;
+}
 
-  /*.section div:nth-child(odd) {
+.section-l {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+}
+
+.section-r {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+}
+
+.section-l div:nth-child(even) {
+  margin-left: 5vw;
+}
+
+.section-r div:nth-child(even) {
+  order: 1;
+  margin-right: 5vw;
+}
+
+.section-r div:nth-child(odd) {
+  order: 2;
+}
+
+/*.section div:nth-child(odd) {
     background-color: blue;
     order:1;
   }*/
 
-  
-  
 
 
 
@@ -393,230 +545,271 @@ margin-block-end: 1em;
 
 
 
-    /************* SIDA STYRELSEN *************/
-    .container3 {  
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      gap: 0px 0px;
-      grid-auto-flow: row;
-      grid-template-areas:
-      "hero-img3"
-      "members"
-      "accordion-content"
-      "footer";
-    }
-    
-    .hero-img3 {  
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      gap: 0px 0px;
-      grid-auto-flow: row;
-      grid-template-areas:
-        "nav-links nav-links nav-links nav-links nav-links nav-links"
-        ". hero-heading3 hero-heading3 hero-heading3 hero-heading3 .";
-      grid-area: hero-img3;
-      background-image: url(/images/hero-styrelsen.png);
-      box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
-      height: 70vh;
-      width: 100vw;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
-      color: white;
-    }
-    
-    .hero-heading3 { 
-      grid-area: hero-heading3;
-      text-align: center; 
-  }
 
-  .hero-heading3 h1{
-    margin-bottom: 0;
-    margin-top: 0;
-    line-height: 1;
-    text-align: center;
-  }
 
-  .members {  
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: 5vh 0px;
-    grid-template-areas:
+/************* SIDA STYRELSEN *************/
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "hero-img3"
+    "members"
+    "accordion-content"
+    "footer";
+}
+
+.hero-img3 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav-links nav-links nav-links nav-links nav-links nav-links"
+    ". hero-heading3 hero-heading3 hero-heading3 hero-heading3 .";
+  grid-area: hero-img3;
+  background-image: url(/images/hero-styrelsen.png);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
+  height: 70vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+  color: white;
+}
+
+.hero-heading3 {
+  grid-area: hero-heading3;
+  text-align: center;
+}
+
+.hero-heading3 h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 5vh 0px;
+  grid-template-areas:
     ". . headingmembers headingmembers . ."
     "ordf ordf vice vice sekr sekr"
     "kassor kassor ubu ubu armu armu"
     "infou infou stum stum idego idego"
     ". cego cego dvego dvego .";
-    grid-area: members;
-    text-align: center;
-    margin-left: 15vw;
-      margin-right: 15vw;
-      width: 70vw;
-  }
+  grid-area: members;
+  text-align: center;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  width: 70vw;
+}
 
-  .ordf{ grid-area: ordf; }
-  .vice{ grid-area: vice; }
-  .sekr{ grid-area: sekr; }
-  .kassor{ grid-area: kassor; }
-  .ubu{ grid-area: ubu; }
-  .armu{ grid-area: armu; }
-  .infou{ grid-area: infou; }
-  .stum{ grid-area: stum; }
-  .idego{ grid-area: idego; }
-  .cego{ grid-area: cego; }
-  .dvego{ grid-area: dvego; }
-  .headingmembers{ grid-area: headingmembers; }
+.ordf {
+  grid-area: ordf;
+}
+
+.vice {
+  grid-area: vice;
+}
+
+.sekr {
+  grid-area: sekr;
+}
+
+.kassor {
+  grid-area: kassor;
+}
+
+.ubu {
+  grid-area: ubu;
+}
+
+.armu {
+  grid-area: armu;
+}
+
+.infou {
+  grid-area: infou;
+}
+
+.stum {
+  grid-area: stum;
+}
+
+.idego {
+  grid-area: idego;
+}
+
+.cego {
+  grid-area: cego;
+}
+
+.dvego {
+  grid-area: dvego;
+}
+
+.headingmembers {
+  grid-area: headingmembers;
+}
 
 
-  .members h1, .members h5, .members a {
-    color: black;
-  }
+.members h1, .members h5, .members a {
+  color: black;
+}
 
-  .members h5 {
-    font-size: 15px;
-  }
+.members h5 {
+  font-size: 15px;
+}
 
-  .members h1 {
-    font-size: 50px;
-  }
+.members h1 {
+  font-size: 50px;
+}
 
-  .members h5, .members p {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-  }
-
-
-
-
-
-
-
-    /************* SIDA DOKUMENT *************/
-    .container4 {  
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      gap: 0px 0px;
-      grid-auto-flow: row;
-      grid-template-areas:
-      "hero-img4"
-      "description"
-      "links"
-      "footer";
-    }
-    
-    .hero-img4 {  
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      gap: 0px 0px;
-      grid-auto-flow: row;
-      grid-template-areas:
-        "nav-links nav-links nav-links nav-links nav-links nav-links"
-        ". hero-heading4 hero-heading4 hero-heading4 hero-heading4 .";
-      grid-area: hero-img4;
-      background-image: url(/images/hero-dokument.png);
-      box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
-      height: 70vh;
-      width: 100vw;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
-      color: white;
-    }
-    
-    .hero-heading4 { 
-      grid-area: hero-heading4;
-      text-align: center; 
-  }
-
-  .hero-heading3 h1{
-    margin-bottom: 0;
-    margin-top: 0;
-    line-height: 1;
-    text-align: center;
-  }
-
-  .links{
-    display: grid;
-    grid-template-columns: auto;
-    grid-area: links;
-    margin-left: 15vw;
-
-  }
-
-  .links a{
-    color: black;
-    margin-bottom: 3vh;
-  }
+.members h5, .members p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
 
 
 
 
 
 
-  /*TEST*/
-  .accordion-content {
-    max-width: 70vw;
-    margin: 0 auto;
-    padding: 2rem;
-    grid-area: accordion-content;
-  }
-  .accordion-item {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem;
-    border-bottom: 1px solid #D7D7D7;
-    cursor: pointer;
-    margin-bottom: 0.5em;
-  }
-  .item-header {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 0.2em;
-  }
-  
-  .item-icon {
-    margin-top: 1rem;
-    flex: 0 0 25px;
-    display: grid;
-    place-items: center;
-    font-size: 1.25rem;
-    height: 35px;
-    width: 25px;
-    cursor: pointer;
-  }
-  .item-icon i {
-    transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
-  }
-  .item-question {
-    display: inline-flex;
-  }
 
-  .item-question h4{
-    font-size: 1rem;
-    font-weight: 500;
-  }
+/************* SIDA DOKUMENT *************/
+.container4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "hero-img4"
+    "description"
+    "links"
+    "footer";
+}
 
-  .emoji{
-    margin-right: 1.5vw;
-  }
+.hero-img4 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav-links nav-links nav-links nav-links nav-links nav-links"
+    ". hero-heading4 hero-heading4 hero-heading4 hero-heading4 .";
+  grid-area: hero-img4;
+  background-image: url(/images/hero-dokument.png);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
+  height: 70vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+  color: white;
+}
 
-  
-  .active .item-icon i {
-    transform: rotate(180deg);
-  }
-  
-  .active .item-question {
-    font-weight: 500;
-  }
-  
-  .item-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 300ms ease;
-  }
-  
-  .item-answer {
-    line-height: 150%;
-    opacity: 0.8;
-  }
+.hero-heading4 {
+  grid-area: hero-heading4;
+  text-align: center;
+}
+
+.hero-heading3 h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: auto;
+  grid-area: links;
+  margin-left: 15vw;
+
+}
+
+.links a {
+  color: black;
+  margin-bottom: 3vh;
+}
+
+
+
+
+
+
+/*TEST*/
+.accordion-content {
+  max-width: 70vw;
+  margin: 0 auto;
+  padding: 2rem;
+  grid-area: accordion-content;
+}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  border-bottom: 1px solid #D7D7D7;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.2em;
+}
+
+.item-icon {
+  margin-top: 1rem;
+  flex: 0 0 25px;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  height: 35px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.item-icon i {
+  transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.item-question {
+  display: inline-flex;
+}
+
+.item-question h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.emoji {
+  margin-right: 1.5vw;
+}
+
+
+.active .item-icon i {
+  transform: rotate(180deg);
+}
+
+.active .item-question {
+  font-weight: 500;
+}
+
+.item-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+
+.item-answer {
+  line-height: 150%;
+  opacity: 0.8;
+}
