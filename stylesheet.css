@@ -339,7 +339,7 @@ margin-block-end: 1em;
 
   .description { 
       grid-area: description; 
-      margin-bottom: 7vw;
+      margin-bottom: 5vw;
     }
 
     .description h2 {
@@ -351,6 +351,7 @@ margin-block-end: 1em;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
     gap: 10vh;
+    margin-top: 5vh;
   }
 
   .section-l {
@@ -580,7 +581,7 @@ margin-block-end: 1em;
     display: grid;
     place-items: center;
     font-size: 1.25rem;
-    height: 25px;
+    height: 35px;
     width: 25px;
     cursor: pointer;
   }
@@ -588,10 +589,18 @@ margin-block-end: 1em;
     transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
   }
   .item-question {
-    font-size: 1em;
-    line-height: 1;
+    display: inline-flex;
+  }
+
+  .item-question h4{
+    font-size: 1rem;
     font-weight: 500;
   }
+
+  .emoji{
+    margin-right: 1.5vw;
+  }
+
   
   .active .item-icon i {
     transform: rotate(180deg);
