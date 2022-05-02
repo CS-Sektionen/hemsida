@@ -392,7 +392,7 @@ margin-block-end: 1em;
 
 
 
-    /*************SIDA NYA STUDENTER *************/
+    /************* SIDA STYRELSEN *************/
     .container3 {  
       display: grid;
       grid-template-columns: 1fr;
@@ -482,4 +482,67 @@ margin-block-end: 1em;
   .members h5, .members p {
     margin-block-start: 0em;
     margin-block-end: 0em;
+  }
+
+
+
+
+
+
+
+    /************* SIDA STYRELSEN *************/
+    .container4 {  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+      "hero-img4"
+      "description"
+      "links"
+      "footer";
+    }
+    
+    .hero-img4 {  
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "nav-links nav-links nav-links nav-links nav-links nav-links"
+        ". hero-heading4 hero-heading4 hero-heading4 hero-heading4 .";
+      grid-area: hero-img4;
+      background-image: url(/images/hero-dokument.png);
+      box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
+      height: 70vh;
+      width: 100vw;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+      color: white;
+    }
+    
+    .hero-heading4 { 
+      grid-area: hero-heading4;
+      text-align: center; 
+  }
+
+  .hero-heading3 h1{
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .links{
+    display: grid;
+    grid-template-columns: auto;
+    grid-area: links;
+    margin-left: 15vw;
+
+  }
+
+  .links a{
+    color: black;
+    margin-bottom: 3vh;
   }
