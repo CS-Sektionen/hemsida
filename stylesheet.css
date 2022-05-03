@@ -604,6 +604,7 @@ h4 { font-size: 20px; }
     "hero-img3"
     "members"
     "accordion-content"
+    "join"
     "footer";
 }
 
@@ -719,37 +720,37 @@ h4 { font-size: 20px; }
   width: 100vw;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
   color: white;
+
 }
 
-.hero-heading4 {
-  grid-area: hero-heading4;
+.accordion-content h2, .members h2{
+  color: black;
   text-align: center;
 }
 
-.hero-heading3 h1 {
-  margin-bottom: 0;
-  margin-top: 0;
-  line-height: 1;
-  text-align: center;
-}
 
-.links {
+
+.join{
   display: grid;
   grid-template-columns: auto;
-  grid-area: links;
-  margin-left: 15vw;
-
+  grid-template-rows: 15vh;
+  grid-gap: 0;
+  text-align: center;
+  background-color: #15004F;
+  height: 60vh;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  margin-bottom: -20vh;
+  padding-top: 10vh;
+  margin-top: 10vh;
 }
 
-.links a {
-  color: black;
-  margin-bottom: 3vh;
-}
 
 .accordion-content {
   max-width: 70vw;
   margin: 0 auto;
   padding: 2rem;
+  margin-top: 10vh;
   grid-area: accordion-content;
 }
 
@@ -813,4 +814,69 @@ h4 { font-size: 20px; }
 .item-answer {
   line-height: 150%;
   opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+/*---------- DOCUMENTS ----------*/
+.container4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "hero-img4"
+    "description"
+    "links"
+    "footer";
+}
+
+.hero-img4 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav-links nav-links nav-links nav-links nav-links nav-links"
+    ". hero-heading4 hero-heading4 hero-heading4 hero-heading4 .";
+  grid-area: hero-img4;
+  background-image: url(/images/hero-dokument.png);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
+  height: 70vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+  color: white;
+}
+
+.hero-heading4 {
+  grid-area: hero-heading4;
+  text-align: center;
+}
+
+.hero-heading3 h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: auto;
+  grid-area: links;
+  margin-left: 15vw;
+
+}
+
+.links a {
+  color: black;
+  margin-bottom: 3vh;
 }
