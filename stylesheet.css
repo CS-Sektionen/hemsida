@@ -169,6 +169,16 @@ h4 { font-size: 20px; }
   text-align: center;
 }
 
+@media only screen and (max-width: 750px){
+  .footer {
+    grid-template-areas:
+      "footer-links"
+      "footer-contact"
+      "footer-credits"
+      "footer-copyright";
+  }
+}
+
 
 
 
@@ -476,6 +486,78 @@ h4 { font-size: 20px; }
 
 .contact-other {
   grid-area: contact-other;
+}
+
+
+/*Phone*/
+@media only screen and (max-width: 750px){
+
+  .hero-img {
+    grid-template-areas:
+      "nav-links"
+      "hero-heading";
+    grid-area: hero-img;
+  }
+
+  .about {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "about-text"
+      "about-logos"
+      "about-ntk"
+      "about-logo";
+    grid-area: about;
+  }
+
+  .about-logos {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-auto-flow: column;
+    gap: 0px 2vw;
+    grid-template-areas:
+      "about-logos-c about-logos-dv about-logos-id";
+  }
+
+  .about-logos-c img, .about-logos-dv img, .about-logos-id img{
+    max-width: 20vw;
+  }
+
+  .about-logos-c, .about-logos-dv, .about-logos-id{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .social-media {
+    gap: 5vw 5vw;
+    grid-template-areas:
+      "social-media-heading"
+      "social-media-fb"
+      "social-media-ig"
+      "social-media-discord"
+      "social-media-orbi";
+  }
+
+  .social-media-heading {
+    grid-area: social-media-heading;
+    text-align: center;
+  }
+  
+  .social-media-fb, .social-media-discord { padding-left: 0vw; }
+  .social-media-orbi, .social-media-ig{ padding-right: 0vw; }
+
+  .social-media-fb, .social-media-discord, .social-media-orbi, .social-media-ig{
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  .contact {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "contact-text"
+      "contact-company"
+      "contact-other";
+  }
 }
 
 
