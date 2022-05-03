@@ -722,6 +722,10 @@ h4 { font-size: 20px; }
   color: white;
 
 }
+.hero-heading4 {
+  grid-area: hero-heading4;
+  text-align: center;
+}
 
 .accordion-content h2, .members h2{
   color: black;
@@ -861,7 +865,7 @@ h4 { font-size: 20px; }
   text-align: center;
 }
 
-.hero-heading3 h1 {
+.hero-heading4 h1 {
   margin-bottom: 0;
   margin-top: 0;
   line-height: 1;
