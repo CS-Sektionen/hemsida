@@ -1,31 +1,183 @@
+/*---------- RULES ----------*/
 @charset "UTF-8";
 
 body {
   font-family: 'Poppins';
   margin: 0;
   line-height: 2;
+  width: 100vw;
+}
+h1 { font-size: 60px; }
+h2 { font-size: 40px; }
+h3 { font-size: 30px; }
+h4 { font-size: 20px; }
+.hero-img h1, .hero-img2 h1 { font-family: 'Raleway';}
+
+
+
+
+
+
+
+/*---------- NAVBAR ----------*/
+.nav-links {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav-link1 nav-link2 nav-link3 nav-link4 nav-link5 nav-link6";
+  grid-area: nav-links;
+  display: inline-grid;
+  justify-items: center;
+  text-align: center;
+  padding: 1rem;
+  height: 10vh;
+  width: 100wv;
+  position: sticky;
 }
 
-h1 {
-  font-size: 60px;
+.nav-links a:link {
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-h2 {
-  font-size: 40px;
+.nav-links a:hover{
+  text-decoration: underline 2px solid white;
 }
 
-h3 {
-  font-size: 30px;
+.nav-link1 { grid-area: nav-link1; }
+.nav-link2 { grid-area: nav-link2; }
+.nav-link3 { grid-area: nav-link3; }
+.nav-link4 { grid-area: nav-link4; }
+.nav-link5 { grid-area: nav-link5; }
+.nav-link6 { grid-area: nav-link6;}
+
+
+@media only screen and (min-width: 750px) {
+  
+  .sidepanel, .openbtn {
+    display: none;
+  }
 }
 
-h4 {
-  font-size: 20px;
+@media only screen and (max-width: 750px) {
+
+  .navbar-resp {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "openbtn . .";
+  }
+
+  .sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+
+  .openbtn {
+    height: 10vh;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    grid-area: openbtn;
+  }
+
+  .openbtn:hover {
+    color: #373833;
+  }
+
+  .nav-links {
+    display: none;
+  }
 }
 
-.hero-img h1, .hero-img2 h1 {
-  font-family: 'Raleway';
+
+
+
+
+
+/*---------- FOOTER ----------*/
+.footer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 0px 5vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "footer-links footer-credits footer-contact"
+    "footer-copyright footer-copyright footer-copyright";
+  grid-area: footer;
+  background-color: #EBD8BC;
+  clip-path: polygon(0 0, 100% 21%, 100% 100%, 0% 100%);
+  padding-top: 20vh;
+  padding-bottom: 5vh;
 }
 
+.footer a, .footer p {
+  color: black;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  line-height: 2;
+}
+
+.footer-credits, .footer-links, .footer-contact{
+  align-self: end;
+}
+
+.footer-links { grid-area: footer-links; }
+.footer-credits { grid-area: footer-credits; }
+.footer-contact { grid-area: footer-contact; }
+
+.footer-copyright {
+  grid-area: footer-copyright;
+  padding-top: 10vh;
+  text-align: center;
+}
+
+
+
+
+
+
+/*---------- INDEX ----------*/
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -50,7 +202,6 @@ h4 {
   padding-left: 15vw;
   padding-right: 15vw;
   width: 70vw;
-
 }
 
 .hero-img {
@@ -65,7 +216,7 @@ h4 {
     ". . . hero-heading hero-heading hero-heading";
   grid-area: hero-img;
   background-image: url(/images/hero.png);
-  height: 70vh;
+  height: 85vh;
   width: 100vw;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
   color: white;
@@ -94,46 +245,6 @@ h4 {
   font-weight: 500;
 }
 
-.nav-links {
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "nav-link1 nav-link2 nav-link3 nav-link4 nav-link5 nav-link6";
-  grid-area: nav-links;
-  display: inline-grid;
-  justify-items: center;
-  text-align: center;
-  padding: 1rem;
-}
-
-.nav-link1 {
-  grid-area: nav-link1;
-}
-
-.nav-link2 {
-  grid-area: nav-link2;
-}
-
-.nav-link3 {
-  grid-area: nav-link3;
-}
-
-.nav-link4 {
-  grid-area: nav-link4;
-}
-
-.nav-link5 {
-  grid-area: nav-link5;
-}
-
-.nav-link6 {
-  grid-area: nav-link6;
-}
-
-
-
 .about {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -148,13 +259,8 @@ h4 {
   margin-top: 10vh;
 }
 
-.about-text {
-  grid-area: about-text;
-}
-
-.about-text h2 {
-  color: black;
-}
+.about-text { grid-area: about-text; }
+.about-text h2 { color: black; }
 
 .about-logos {
   display: grid;
@@ -169,25 +275,11 @@ h4 {
   grid-area: about-logos;
 }
 
-.about-logos-c {
-  grid-area: about-logos-c;
-}
-
-.about-logos-dv {
-  grid-area: about-logos-dv;
-}
-
-.about-logos-id {
-  grid-area: about-logos-id;
-}
-
-.about-ntk {
-  grid-area: about-ntk;
-}
-
-.about-ntk h2 {
-  color: black;
-}
+.about-logos-c { grid-area: about-logos-c; }
+.about-logos-dv { grid-area: about-logos-dv; }
+.about-logos-id { grid-area: about-logos-id; }
+.about-ntk { grid-area: about-ntk; }
+.about-ntk h2 { color: black; }
 
 .about-logo {
   grid-area: about-logo;
@@ -196,7 +288,6 @@ h4 {
   align-items: center;
 }
 
-/*CENTRERAAAAAAA!!!!!!!!!*/
 .social-media {
   display: grid;
   grid-template-columns: auto;
@@ -210,19 +301,29 @@ h4 {
   grid-area: social-media;
   background-color: #15004F;
   padding-top: 5vh;
-  padding-bottom: 5vh;
-  padding-left: 15vw;
-  padding-right: 15vw;
-  align-content: center;
+  padding-bottom: 15vh;
 }
 
 .social-media p, h2, h5, a {
   color: white;
 }
 
+.social-media p, a {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
 .social-media-heading {
   grid-area: social-media-heading;
   text-align: center;
+}
+
+.social-media-fb, .social-media-discord {
+  padding-left: 10vw;
+}
+
+.social-media-orbi, .social-media-ig{
+  padding-right: 10vw;
 }
 
 .social-media-fb {
@@ -249,9 +350,7 @@ h4 {
   margin-block-end: 0em;
 }
 
-.fb-link {
-  grid-area: fb-link;
-}
+.fb-link { grid-area: fb-link; }
 
 
 .social-media-ig {
@@ -382,49 +481,6 @@ h4 {
   grid-area: contact-other;
 }
 
-.footer {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  gap: 0px 5vw;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "footer-links footer-credits footer-contact"
-    "footer-copyright footer-copyright footer-copyright";
-  grid-area: footer;
-  background-color: #EBD8BC;
-  clip-path: polygon(0 0, 100% 21%, 100% 100%, 0% 100%);
-  padding-top: 20vh;
-  padding-bottom: 5vh;
-}
-
-.footer a, .footer p {
-  color: black;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  line-height: 2;
-}
-
-.footer-links {
-  grid-area: footer-links;
-  align-self: end;
-}
-
-.footer-credits {
-  grid-area: footer-credits;
-  align-self: end;
-}
-
-.footer-contact {
-  grid-area: footer-contact;
-  align-self: end;
-}
-
-.footer-copyright {
-  grid-area: footer-copyright;
-  padding-top: 10vh;
-  text-align: center;
-}
 
 
 
@@ -439,9 +495,7 @@ h4 {
 
 
 
-
-/*************SIDA NYA STUDENTER *************/
-
+/*---------- NEWSTUDENTS ----------*/
 .container2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -533,10 +587,6 @@ h4 {
   order: 2;
 }
 
-/*.section div:nth-child(odd) {
-    background-color: blue;
-    order:1;
-  }*/
 
 
 
@@ -546,8 +596,7 @@ h4 {
 
 
 
-
-/************* SIDA STYRELSEN *************/
+/*---------- BOARD ----------*/
 .container3 {
   display: grid;
   grid-template-columns: 1fr;
@@ -609,67 +658,29 @@ h4 {
   width: 70vw;
 }
 
-.ordf {
-  grid-area: ordf;
-}
-
-.vice {
-  grid-area: vice;
-}
-
-.sekr {
-  grid-area: sekr;
-}
-
-.kassor {
-  grid-area: kassor;
-}
-
-.ubu {
-  grid-area: ubu;
-}
-
-.armu {
-  grid-area: armu;
-}
-
-.infou {
-  grid-area: infou;
-}
-
-.stum {
-  grid-area: stum;
-}
-
-.idego {
-  grid-area: idego;
-}
-
-.cego {
-  grid-area: cego;
-}
-
-.dvego {
-  grid-area: dvego;
-}
-
-.headingmembers {
-  grid-area: headingmembers;
-}
+.ordf { grid-area: ordf; }
+.vice { grid-area: vice; }
+.sekr { grid-area: sekr; }
+.kassor { grid-area: kassor; }
+.ubu { grid-area: ubu; }
+.armu { grid-area: armu; }
+.infou { grid-area: infou; }
+.stum { grid-area: stum; }
+.idego { grid-area: idego; }
+.cego { grid-area: cego; }
+.dvego { grid-area: dvego; }
+.headingmembers { grid-area: headingmembers; }
 
 
 .members h1, .members h5, .members a {
   color: black;
 }
-
 .members h5 {
   font-size: 15px;
 }
-
 .members h1 {
   font-size: 50px;
 }
-
 .members h5, .members p {
   margin-block-start: 0em;
   margin-block-end: 0em;
@@ -681,7 +692,7 @@ h4 {
 
 
 
-/************* SIDA DOKUMENT *************/
+/*---------- DOCUMENTS ----------*/
 .container4 {
   display: grid;
   grid-template-columns: 1fr;
@@ -738,12 +749,6 @@ h4 {
   margin-bottom: 3vh;
 }
 
-
-
-
-
-
-/*TEST*/
 .accordion-content {
   max-width: 70vw;
   margin: 0 auto;
@@ -793,7 +798,6 @@ h4 {
 .emoji {
   margin-right: 1.5vw;
 }
-
 
 .active .item-icon i {
   transform: rotate(180deg);
