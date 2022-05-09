@@ -4,6 +4,7 @@
 body {
   font-family: 'Poppins';
   margin: 0;
+  top: 0;
   line-height: 2;
   width: 100vw;
 }
@@ -116,9 +117,9 @@ h4 { font-size: 20px; }
     background: none;
     border: none;
     margin: 0px;
-    padding: 0px;
-    padding-left: 4vw;
+    padding-left: 3vh;
     grid-area: openbtn;
+    justify-self: start;
   }
 
   .nav-links {
@@ -900,7 +901,7 @@ h4 { font-size: 20px; }
 }
 
 
-/*Phone*/
+/*Phone INDEX*/
 @media only screen and (max-width: 750px){
 
   .hero-img {
@@ -912,6 +913,17 @@ h4 { font-size: 20px; }
 
   }
 
+  .hero-heading {
+    text-align: center;
+    padding: 0vh 2vw 0vh 2vw;
+    padding-right: 0vw;
+  }
+  
+  .hero-heading img {
+    width: 40vw;
+    padding-bottom: 5vh;
+  }
+
   .about {
     grid-template-columns: auto;
     grid-template-areas:
@@ -920,6 +932,11 @@ h4 { font-size: 20px; }
       "about-ntk"
       "about-logo";
     grid-area: about;
+    margin-top: 0;
+    gap: 3vh 0;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 
   .about-logos {
@@ -941,18 +958,20 @@ h4 { font-size: 20px; }
   }
 
   .social-media {
-    gap: 5vw 5vw;
+    gap: 10vw 5vw;
     grid-template-areas:
       "social-media-heading"
       "social-media-fb"
       "social-media-ig"
       "social-media-discord"
       "social-media-orbi";
+    padding-left: 10vw;
+    padding-right: 10vw;
+    width: 80vw;
   }
 
   .social-media-heading {
     grid-area: social-media-heading;
-    text-align: center;
   }
   
   .social-media-fb, .social-media-discord { padding-left: 0vw; }
@@ -970,6 +989,10 @@ h4 { font-size: 20px; }
       "contact-text"
       "contact-company"
       "contact-other";
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
   }
 
 
@@ -992,8 +1015,8 @@ h4 { font-size: 20px; }
   .join{
     padding-left: 5vw;
     padding-right: 5vw;
-    margin-bottom: -30vh
-    
+    margin-bottom: -35vh;
+    padding-bottom: 10vh;
   }
 
   .join h2{
@@ -1002,8 +1025,6 @@ h4 { font-size: 20px; }
     margin-block-end: 0;
 
   }
-
-
 
   .section-l {
     grid-template-columns: 1fr;
@@ -1026,5 +1047,41 @@ h4 { font-size: 20px; }
     order: 1;
   }
 
+  .accordion-content {
+    max-width: 80vw;
+  }
 
+  .item-question h4 {
+    font-size: 0.8rem;
+  }
+
+  .sections {
+    grid-template-columns: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sections img{
+    max-width: 80vw;
+  }
+
+  .description {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+  }
+
+  .hero-heading4 h1 {
+    font-size: 60px;
+  }
+
+  .hero-img4 {
+    grid-template-areas:
+    "nav-links"
+    "hero-heading4";
+  }
 }
+
