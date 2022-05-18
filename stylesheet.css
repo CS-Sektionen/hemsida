@@ -1,4 +1,8 @@
-/*---------- RULES ----------*/
+/*---------- REGLER ----------*/
+/*
+* Globala regler för hela hemsidan
+*/
+
 @charset "UTF-8";
 
 body {
@@ -8,11 +12,20 @@ body {
   line-height: 2;
   width: 100vw;
 }
-h1 { font-size: 60px; }
-h2 { font-size: 40px; }
-h3 { font-size: 30px; }
-h4 { font-size: 20px; }
-.hero-img h1, .hero-img2 h1 { font-family: 'Raleway';}
+
+h1 { font-size: 3.75em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.875em; }
+h4 { font-size: 1.25em; }
+
+@media only screen and (max-width: 750px) {
+  h1 { font-size: 3em; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.875em; }
+  h4 { font-size: 1.25em; }
+}
+
+.hero-img h1, .hero-img2 h1 { font-family: 'Raleway'; }
 
 
 
@@ -21,6 +34,9 @@ h4 { font-size: 20px; }
 
 
 /*---------- NAVBAR ----------*/
+/*
+* Menyn som övergår till hamburgarmeny i responsiva läget
+*/
 .nav-links {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
@@ -44,23 +60,18 @@ h4 { font-size: 20px; }
   text-decoration: none;
 }
 
-.nav-links a:hover{
-  text-decoration: underline 2px solid white;
-}
+.nav-links a:hover { text-decoration: underline 2px solid white; }
 
 .nav-link1 { grid-area: nav-link1; }
 .nav-link2 { grid-area: nav-link2; }
 .nav-link3 { grid-area: nav-link3; }
 .nav-link4 { grid-area: nav-link4; }
 .nav-link5 { grid-area: nav-link5; }
-.nav-link6 { grid-area: nav-link6;}
+.nav-link6 { grid-area: nav-link6; }
 
 
 @media only screen and (min-width: 750px) {
-  
-  .sidepanel, .openbtn {
-    display: none;
-  }
+  .sidepanel, .openbtn { display: none; }
 }
 
 @media only screen and (max-width: 750px) {
@@ -98,9 +109,7 @@ h4 { font-size: 20px; }
     transition: 0.3s;
   }
 
-  .sidepanel a:hover {
-    color: #f1f1f1;
-  }
+  .sidepanel a:hover { color: #f1f1f1; }
 
   .sidepanel .closebtn {
     position: absolute;
@@ -122,9 +131,7 @@ h4 { font-size: 20px; }
     justify-self: start;
   }
 
-  .nav-links {
-    display: none;
-  }
+  .nav-links { display: none; }
 }
 
 
@@ -133,6 +140,9 @@ h4 { font-size: 20px; }
 
 
 /*---------- FOOTER ----------*/
+/*
+* Footer innehållande länkar, credits och kontaktuppgifter
+*/
 .footer {
   display: grid;
   grid-template-columns: auto;
@@ -156,9 +166,7 @@ h4 { font-size: 20px; }
   line-height: 2;
 }
 
-.footer-credits, .footer-links, .footer-contact{
-  align-self: end;
-}
+.footer-credits, .footer-links, .footer-contact { align-self: end; }
 
 .footer-links { grid-area: footer-links; }
 .footer-credits { grid-area: footer-credits; }
@@ -170,7 +178,7 @@ h4 { font-size: 20px; }
   text-align: center;
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 750px) {
   .footer {
     grid-template-areas:
       "footer-links"
@@ -186,6 +194,9 @@ h4 { font-size: 20px; }
 
 
 /*---------- INDEX ----------*/
+/*
+* Första sidan som innehåller information, sociala medier, kontakt.
+*/
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -201,8 +212,7 @@ h4 { font-size: 20px; }
 }
 
 .about, .contact {
-  margin-left: 15vw;
-  margin-right: 15vw;
+  margin: 0px 15vw;
   width: 70vw;
 }
 
@@ -233,8 +243,7 @@ h4 { font-size: 20px; }
 .hero-heading {
   grid-area: hero-heading;
   text-align: center;
-  padding-top: 7vh;
-  padding-right: 7vw;
+  padding: 7vh 7vw 0 0;
 }
 
 .hero-heading img {
@@ -257,7 +266,7 @@ h4 { font-size: 20px; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  gap: 10vh 0px;
+  gap: 5vh 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "about-logos about-text about-text"
@@ -268,6 +277,7 @@ h4 { font-size: 20px; }
 }
 
 .about-text { grid-area: about-text; }
+
 .about-text h2 { color: black; }
 
 .about-logos {
@@ -287,7 +297,10 @@ h4 { font-size: 20px; }
 .about-logos-dv { grid-area: about-logos-dv; }
 .about-logos-id { grid-area: about-logos-id; }
 .about-ntk { grid-area: about-ntk; }
-.about-ntk h2 { color: black; }
+
+.about-ntk h2 {
+  color: black;
+}
 
 .about-logo {
   grid-area: about-logo;
@@ -312,9 +325,7 @@ h4 { font-size: 20px; }
   padding-bottom: 15vh;
 }
 
-.social-media p, h2, h5, a {
-  color: white;
-}
+.social-media p, h2, h5, a { color: white; }
 
 .social-media p, a {
   margin-block-start: 0em;
@@ -326,18 +337,13 @@ h4 { font-size: 20px; }
   text-align: center;
 }
 
-.social-media-fb, .social-media-discord {
-  padding-left: 10vw;
-}
-
-.social-media-orbi, .social-media-ig{
-  padding-right: 10vw;
-}
+.social-media-fb, .social-media-discord { padding-left: 10vw; }
+.social-media-orbi, .social-media-ig { padding-right: 10vw; }
 
 .social-media-fb {
   grid-area: social-media-fb;
   display: grid;
-  grid-template-columns: 0fr 1fr;
+  grid-template-columns: 0.2fr 1fr;
   grid-template-rows: 0fr 0fr;
   gap: 0px 2vw;
   grid-auto-flow: row;
@@ -345,26 +351,23 @@ h4 { font-size: 20px; }
     "logo-fb fb-heading"
     "logo-fb fb-link";
 }
-
 .logo-fb {
   grid-area: logo-fb;
   font-size: 40px;
   color: white;
 }
-
 .fb-heading {
   grid-area: fb-heading;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
-
 .fb-link { grid-area: fb-link; }
 
 
 .social-media-ig {
   grid-area: social-media-ig;
   display: grid;
-  grid-template-columns: 0fr 1fr;
+  grid-template-columns: 0.2fr 1fr;
   grid-template-rows: 0fr 0fr;
   gap: 0px 2vw;
   grid-auto-flow: row;
@@ -372,29 +375,23 @@ h4 { font-size: 20px; }
     "logo-ig ig-heading"
     "logo-ig ig-link";
 }
-
 .logo-ig {
   grid-area: logo-ig;
   font-size: 40px;
   color: white;
 }
-
 .ig-heading {
   grid-area: ig-heading;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
-
-.ig-link {
-  grid-area: ig-link;
-}
-
+.ig-link { grid-area: ig-link; }
 
 
 .social-media-discord {
   grid-area: social-media-discord;
   display: grid;
-  grid-template-columns: 0fr 1fr;
+  grid-template-columns: 0.2fr 1fr;
   grid-template-rows: 0fr 0fr;
   gap: 0px 2vw;
   grid-auto-flow: row;
@@ -402,29 +399,24 @@ h4 { font-size: 20px; }
     "logo-discord discord-heading"
     "logo-discord discord-link";
 }
-
 .logo-discord {
   grid-area: logo-discord;
   font-size: 40px;
   color: white;
 }
-
 .discord-heading {
   grid-area: discord-heading;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
-
-.discord-link {
-  grid-area: discord-link;
-}
+.discord-link { grid-area: discord-link; }
 
 
 
 .social-media-orbi {
   grid-area: social-media-orbi;
   display: grid;
-  grid-template-columns: 0fr 1fr;
+  grid-template-columns: 0.2fr 1fr;
   grid-template-rows: 0fr 0fr;
   gap: 0px 2vw;
   grid-auto-flow: row;
@@ -432,22 +424,18 @@ h4 { font-size: 20px; }
     "logo-orbi orbi-heading"
     "logo-orbi orbi-link";
 }
-
 .logo-orbi {
   grid-area: logo-orbi;
-  font-size: 40px;
-  color: white;
 }
-
+.logo-orbi {
+  max-width: 40px;
+}
 .orbi-heading {
   grid-area: orbi-heading;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
-
-.orbi-link {
-  grid-area: orbi-link;
-}
+.orbi-link { grid-area: orbi-link; }
 
 .contact {
   display: grid;
@@ -463,17 +451,11 @@ h4 { font-size: 20px; }
   margin-top: 10vh;
 }
 
-.contact-text {
-  grid-area: contact-text;
-}
+.contact-text { grid-area: contact-text; }
 
-.contact-text h2, .contact a, .contact h4 {
-  color: black;
-}
+.contact-text h2, .contact a, .contact h4 { color: black; }
 
-.contact-company {
-  grid-area: contact-company;
-}
+.contact-company { grid-area: contact-company; }
 
 .contact-company h2, .contact-company h4, .contact-company a {
   margin-block-start: 0em;
@@ -504,6 +486,9 @@ h4 { font-size: 20px; }
 
 
 /*---------- NEWSTUDENTS ----------*/
+/*
+* Sida för nya studenter som har olika sektioner.
+*/
 .container2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -604,7 +589,10 @@ h4 { font-size: 20px; }
 
 
 
-/*---------- BOARD ----------*/
+/*---------- STYRELSE ----------*/
+/*
+* Styrelsesidan som ska uppdateras varje år. Byt ut bilder och namn. 
+*/
 .container3 {
   display: grid;
   grid-template-columns: 1fr;
@@ -629,7 +617,7 @@ h4 { font-size: 20px; }
     "nav-links"
     "hero-heading3";
   grid-area: hero-img3;
-  background: url(/images/hero-styrelsen.png) 50%/cover no-repeat;
+  background: url(/images/test2.jpg) 50%/cover no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 70vh;
   width: 100vw;
@@ -682,70 +670,18 @@ h4 { font-size: 20px; }
 
 
 .members h1, .members h5, .members a {
-  color: black;
+color: black;
 }
-.members h5 {
-  font-size: 15px;
-}
-.members h1 {
-  font-size: 50px;
-}
+
+.members h5 { font-size: 15px; }
+.members h1 { font-size: 50px; }
+
 .members h5, .members p {
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
 
-
-
-
-
-
-
-/*---------- DOCUMENTS ----------*/
-.container4 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "hero-img4"
-    "description"
-    "links"
-    "footer";
-}
-
-.hero-img4 {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "nav-links"
-    "hero-heading4";
-  grid-area: hero-img4;
-  background: url(/images/hero-dokument.png) 50%/cover no-repeat;;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
-  height: 70vh;
-  width: 100vw;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
-  color: white;
-
-}
-.hero-heading4 {
-  grid-area: hero-heading4;
-  text-align: center;
-}
-
-.accordion-content h2, .members h2{
-  color: black;
-  text-align: center;
-}
-
-
-
-.join{
+.join {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 15vh;
@@ -760,10 +696,12 @@ h4 { font-size: 20px; }
   margin-top: 10vh;
 }
 
-.join p{
-  color: white;
-}
+.join p { color: white; }
 
+.accordion-content h2, .members h2 {
+  color: black;
+  text-align: center;
+}
 
 .accordion-content {
   max-width: 70vw;
@@ -803,26 +741,18 @@ h4 { font-size: 20px; }
   transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
 }
 
-.item-question {
-  display: inline-flex;
-}
+.item-question { display: inline-flex; }
 
 .item-question h4 {
   font-size: 1rem;
   font-weight: 500;
 }
 
-.emoji {
-  margin-right: 1.5vw;
-}
+.emoji { margin-right: 1.5vw; }
 
-.active .item-icon i {
-  transform: rotate(180deg);
-}
+.active .item-icon i { transform: rotate(180deg); }
 
-.active .item-question {
-  font-weight: 500;
-}
+.active .item-question { font-weight: 500; }
 
 .item-content {
   max-height: 0;
@@ -841,9 +771,10 @@ h4 { font-size: 20px; }
 
 
 
-
-
-/*---------- DOCUMENTS ----------*/
+/*---------- DOKUMENT ----------*/
+/*
+* Dokumentsidan med olika länkar, använd samma drivemapp 
+*/
 .container4 {
   display: grid;
   grid-template-columns: 1fr;
@@ -852,7 +783,7 @@ h4 { font-size: 20px; }
   grid-auto-flow: row;
   grid-template-areas:
     "hero-img4"
-    "description"
+    "description-links"
     "links"
     "footer";
 }
@@ -864,16 +795,25 @@ h4 { font-size: 20px; }
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "nav-links nav-links nav-links nav-links nav-links nav-links"
-    ". hero-heading4 hero-heading4 hero-heading4 hero-heading4 .";
+    "nav-links"
+    "hero-heading4";
   grid-area: hero-img4;
   background: url(/images/hero-dokument.png) 50%/cover no-repeat;
+  ;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 70vh;
   width: 100vw;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
   color: white;
 }
+
+.description-links{
+  grid-area: description-links;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+.description-links h2{ color: black; }
 
 .hero-heading4 {
   grid-area: hero-heading4;
@@ -892,7 +832,7 @@ h4 { font-size: 20px; }
   grid-template-columns: auto;
   grid-area: links;
   margin-left: 15vw;
-
+  margin-right: 15vw;
 }
 
 .links a {
@@ -901,8 +841,15 @@ h4 { font-size: 20px; }
 }
 
 
-/*Phone INDEX*/
-@media only screen and (max-width: 750px){
+
+
+
+
+/*---------- MOBILVERSION ----------*/
+/*
+* Responsiva läget för allt innehåll på sidan
+*/
+@media only screen and (max-width: 750px) {
 
   .hero-img {
     grid-template-areas:
@@ -910,15 +857,14 @@ h4 { font-size: 20px; }
       "hero-heading";
     grid-area: hero-img;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .39)
-
   }
 
   .hero-heading {
     text-align: center;
-    padding: 0vh 2vw 0vh 2vw;
+    padding: 0vh 2vw 10vh 2vw;
     padding-right: 0vw;
   }
-  
+
   .hero-heading img {
     width: 40vw;
     padding-bottom: 5vh;
@@ -931,7 +877,6 @@ h4 { font-size: 20px; }
       "about-logos"
       "about-ntk"
       "about-logo";
-    grid-area: about;
     margin-top: 0;
     gap: 3vh 0;
     width: 80vw;
@@ -948,11 +893,11 @@ h4 { font-size: 20px; }
       "about-logos-c about-logos-dv about-logos-id";
   }
 
-  .about-logos-c img, .about-logos-dv img, .about-logos-id img{
+  .about-logos-c img, .about-logos-dv img, .about-logos-id img {
     max-width: 20vw;
   }
 
-  .about-logos-c, .about-logos-dv, .about-logos-id{
+  .about-logos-c, .about-logos-dv, .about-logos-id {
     margin-top: auto;
     margin-bottom: auto;
   }
@@ -970,14 +915,12 @@ h4 { font-size: 20px; }
     width: 80vw;
   }
 
-  .social-media-heading {
-    grid-area: social-media-heading;
-  }
-  
-  .social-media-fb, .social-media-discord { padding-left: 0vw; }
-  .social-media-orbi, .social-media-ig{ padding-right: 0vw; }
+  .social-media-heading { grid-area: social-media-heading; }
 
-  .social-media-fb, .social-media-discord, .social-media-orbi, .social-media-ig{
+  .social-media-fb, .social-media-discord { padding-left: 0vw; }
+  .social-media-orbi, .social-media-ig { padding-right: 0vw;}
+
+  .social-media-fb, .social-media-discord, .social-media-orbi, .social-media-ig {
     padding-left: 10vw;
     padding-right: 10vw;
   }
@@ -996,53 +939,52 @@ h4 { font-size: 20px; }
   }
 
 
-  .members{
-    grid-template-areas:     
-    "headingmembers"
-    "ordf" 
-    "vice" 
-    "sekr"
-    "kassor"
-    "ubu"
-    "armu"
-    "infou"
-    "stum" 
-    "idego"
-    "cego"
-    "dvego";
+  .members {
+    grid-template-areas:
+      "headingmembers"
+      "ordf"
+      "vice"
+      "sekr"
+      "kassor"
+      "ubu"
+      "armu"
+      "infou"
+      "stum"
+      "idego"
+      "cego"
+      "dvego";
   }
 
-  .join{
+  .join {
     padding-left: 5vw;
     padding-right: 5vw;
     margin-bottom: -35vh;
     padding-bottom: 10vh;
   }
 
-  .join h2{
+  .join h2 {
     line-height: normal;
     margin-block-start: 0;
     margin-block-end: 0;
-
   }
 
   .section-l {
     grid-template-columns: 1fr;
   }
-  
+
   .section-r {
     grid-template-columns: 1fr;
   }
-  
+
   .section-l div:nth-child(even) {
     margin-left: 0;
   }
-  
+
   .section-r div:nth-child(even) {
     order: 2;
     margin-right: 0;
   }
-  
+
   .section-r div:nth-child(odd) {
     order: 1;
   }
@@ -1064,7 +1006,7 @@ h4 { font-size: 20px; }
     align-items: center;
   }
 
-  .sections img{
+  .sections img {
     max-width: 80vw;
   }
 
@@ -1080,8 +1022,12 @@ h4 { font-size: 20px; }
 
   .hero-img4 {
     grid-template-areas:
-    "nav-links"
-    "hero-heading4";
+      "nav-links"
+      "hero-heading4";
+  }
+
+  .description-links, .links{
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
-
