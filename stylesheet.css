@@ -233,7 +233,7 @@ h4 { font-size: 1.25em; }
     ". . . hero-heading hero-heading hero-heading"
     ". . . hero-heading hero-heading hero-heading";
   grid-area: hero-img;
-  background: url(/images/hero.png) 50%/cover no-repeat;
+  background: url(images/hero.png) 50%/cover no-repeat;
   height: 85vh;
   width: 100vw;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
@@ -512,7 +512,7 @@ h4 { font-size: 1.25em; }
     "nav-links"
     "hero-heading2";
   grid-area: hero-img2;
-  background: url(/images/hero-nyastudenter.png) 50%/cover no-repeat;
+  background: url(images/hero-nyastudenter.png) 50%/cover no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 70vh;
   width: 100vw;
@@ -617,7 +617,7 @@ h4 { font-size: 1.25em; }
     "nav-links"
     "hero-heading3";
   grid-area: hero-img3;
-  background: url(/images/test2.jpg) 50%/cover no-repeat;
+  background: url(images/styrelsen2.jpg) 50%/cover no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 70vh;
   width: 100vw;
@@ -798,7 +798,7 @@ color: black;
     "nav-links"
     "hero-heading4";
   grid-area: hero-img4;
-  background: url(/images/hero-dokument.png) 50%/cover no-repeat;
+  background: url(images/hero-dokument.png) 50%/cover no-repeat;
   ;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 70vh;
