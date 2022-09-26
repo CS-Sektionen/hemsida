@@ -34,5 +34,5 @@ jobs:
           # ftp password
           password: ${{ secrets.LOOPIA_FTP_PASSWORD }}
           port: 21 
-          dry-run: true 
+          dry-run: false 
          
