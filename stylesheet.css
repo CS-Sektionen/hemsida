@@ -216,6 +216,10 @@ h4 { font-size: 1.25em; }
   width: 70vw;
 }
 
+.about-ntk a{
+  color: black;
+}
+
 .social-media, .footer {
   padding-left: 15vw;
   padding-right: 15vw;
@@ -233,11 +237,12 @@ h4 { font-size: 1.25em; }
     ". . . hero-heading hero-heading hero-heading"
     ". . . hero-heading hero-heading hero-heading";
   grid-area: hero-img;
-  background: url(images/hero.png) 50%/cover no-repeat;
+  background: rgba(0, 0, 0, 0.4) url(images/hero.png) 50%/cover no-repeat;
   height: 85vh;
   width: 100vw;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
   color: white;
+  background-blend-mode: darken;
 }
 
 .hero-heading {
@@ -580,6 +585,10 @@ h4 { font-size: 1.25em; }
   order: 2;
 }
 
+.section-txt a{
+  color: black;
+}
+
 
 
 
@@ -617,7 +626,7 @@ h4 { font-size: 1.25em; }
     "nav-links"
     "hero-heading3";
   grid-area: hero-img3;
-  background: url(images/styrelsen2.jpg) 50%/cover no-repeat;
+  background: url(images/STYRELSEN.JPG) 50%/cover no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 70vh;
   width: 100vw;
@@ -688,15 +697,22 @@ color: black;
   grid-gap: 0;
   text-align: center;
   background-color: #15004F;
-  height: 60vh;
+  height: 90vh;
   padding-left: 25vw;
   padding-right: 25vw;
-  margin-bottom: -20vh;
+  margin-bottom: -30vh;
   padding-top: 10vh;
   margin-top: 10vh;
 }
 
+.join h2 {
+  line-height: normal;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .join p { color: white; }
+
 
 .accordion-content h2, .members h2 {
   color: black;
@@ -958,8 +974,9 @@ color: black;
   .join {
     padding-left: 5vw;
     padding-right: 5vw;
-    margin-bottom: -35vh;
+    margin-bottom: -40vh;
     padding-bottom: 10vh;
+    height: 95vh;
   }
 
   .join h2 {
