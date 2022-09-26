@@ -32,7 +32,7 @@ jobs:
           # ftp username
           username: cssektionen
           # ftp password
-          password: ${{ LOOPIA-FTP.LOOPIA_FTP_PASSWD }}
+          password: ${{ secrets.LOOPIA_FTP_PASSWORD }}
           port: 21 
           dry-run: true 
          
