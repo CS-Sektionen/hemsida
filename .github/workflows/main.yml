@@ -20,7 +20,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     
-    name: Sync files
+    name: Push files
     steps:
       - name: FTP Deploy
         # You may pin to the exact commit or the version.
