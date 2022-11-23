@@ -237,7 +237,7 @@ h4 { font-size: 1.25em; }
     ". . . hero-heading hero-heading hero-heading"
     ". . . hero-heading hero-heading hero-heading";
   grid-area: hero-img;
-  background: rgba(0, 0, 0, 0.4) url(images/hero.png) 50%/cover no-repeat;
+  background: rgba(0, 0, 0, 0.4) url(images/hero.webp) 50%/cover no-repeat;
   height: 85vh;
   width: 100vw;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
