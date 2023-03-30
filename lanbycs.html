@@ -74,61 +74,71 @@
             </div>
         </div>
         <div class="countdown">
-            
+        
+             <!-- <h2 id="headline">Countdown to my birthday</h2> -->
+            <div id="countdown">
+                <ul>
+                <li><span id="days"></span>Dagar</li>
+                <li><span id="hours"></span>Timmar</li>
+                <li><span id="minutes"></span>Minuter</li>
+                <li><span id="seconds"></span>Sekunder</li>
+                </ul>
+            </div>
+ 
 
-            
-            <!-- Display the countdown timer in an element -->
-            <!--    
-            <p id="demo"></p>
-            
             <script>
-                // Set the date we're counting down to
-                //var countDownDate = new Date("Apr 28, 2023 00:00:00").getTime();
-                var countDownDate = new Date("Mar 23, 2023 13:48:00").getTime();
+                (function () {
+                    const second = 1000,
+                            minute = second * 60,
+                            hour = minute * 60,
+                            day = hour * 24;
 
+                    let today = new Date(),
+                        dd = String(today.getDate()).padStart(2, "0"),
+                        mm = String(today.getMonth() + 1).padStart(2, "0"),
+                        yyyy = today.getFullYear(),
+                        dayMonth = "04/28/",
+                        event = dayMonth + yyyy;
+                    
+                    today = mm + "/" + dd + "/" + yyyy;
+             
+                    
+                    const countDown = new Date(event).getTime(),
+                        x = setInterval(function() {    
 
-                // Update the count down every 1 second
-                var x = setInterval(function() {
+                            const now = new Date().getTime(),
+                                distance = countDown - now;
 
-                // Get today's date and time
-                var now = new Date().getTime();
+                            document.getElementById("days").innerText = Math.floor(distance / (day)),
+                            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-                // Find the distance between now and the count down date
-                var distance = countDownDate - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the element with id="demo"
-                document.getElementById("demo").innerHTML = days + " dagar " + hours + " timmar "
-                + minutes + " minuter " + seconds + " sekunder ";
-
-                // If the count down is finished, write some text
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("demo").innerHTML = "WIHOO";
-                }
-                }, 1000);
+                            if (distance < 0) {
+                            document.getElementById("headline").innerText = "Wihooo!";
+                            document.getElementById("countdown").style.display = "none";
+                            document.getElementById("content").style.display = "block";
+                            clearInterval(x);
+                            }
+                            //seconds
+                        }, 0)
+                }());
             </script>
-            -->
+   
         </div>
         <div class="description-lan">
-            <h2>LANbyCS 👾</h2>
-            <p>Här hittar du länkar till CS-sektionens dokument. Du finner allt från mötesprotokoll, stadgar,
-                reglemente, mallar för äskan, etc. Söker du ett dokument som ej finns att hitta på denna sida så kan du
-                kontakta någon i styrelsen.</p>
+            <h2>Kommande event</h2>
+            <p>Visste du att CS-sektionen har en undergrupp som heter LANbyCS?👾 <br>Årligen anordnar LANbyCS ett LAN för drygt 100 
+                studenter som passar både de med ett enormt spelbibliotek eller för den som gärna håller sig på sin egen Minecraftvärld.
+                <br><br>Den 28-30 april anordnar LANbyCS ett LAN för en mindre skara studenter som uppvärmning inför höstens LAN.
+                Det utlovas roliga turneringar med fina priser🙌</p>
         </div>
 
         <div class="links">
-            <a href="https://drive.google.com/drive/folders/1peOaj3nHz2e2iC-mgPjXiBPUmBrSJYnA?usp=sharing">Styrelsemöten</a>
-            <a href="https://drive.google.com/drive/folders/1lu-tczpqDbdeAbHi0Wh7rHpSqcAJ8zMz?usp=sharing">Stormöten</a>
-            <a href="https://docs.google.com/document/d/1BFHAX2KMRotlkM3KudlpOdazVkE-FZBewQwF5TdNstE/edit?usp=sharing">Stadgar</a>
-            <a href="https://docs.google.com/document/d/1JwiizKsN8EFqoY9HGG2dDa3UrhZl2PIRnUpgB6VrZgw/edit?usp=sharing">Reglemente</a>
-            <a href="https://drive.google.com/drive/folders/1eAcasmS5rlIGwKqkcIXJJTwy5cL8qQD-?usp=sharing">Verksamhetsberättelse</a>
-            <a href="https://drive.google.com/drive/folders/1ks7k0F2veSk2Cv2vIPaY4-hx6bIdeYfy?usp=sharing">Arkiv</a>
+            <h2>Om LANbyCS 👾</h2>
+            <p>LAN by Computing Science (LANbyCS) är en projektgrupp på 9 personer som alla är studenter vid Umeå Universitet, 
+                inom Civilingenjörsprogrammen i Teknisk Datavetenskap, Interaktion & Design och Kandidatprogrammet i Datavetenskap.</p>
+                <br><br>
         </div>
 
         <div class="footer">

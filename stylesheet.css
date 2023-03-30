@@ -871,8 +871,8 @@ color: black;
   grid-auto-flow: row;
   grid-template-areas:
     "hero-img5"
-    "countdown"
     "description-lan"
+    "countdown"
     "links"
     "footer";
 }
@@ -896,25 +896,45 @@ color: black;
   color: white;
 }
 
-
-
-
-
-
 .countdown {
   grid-area: countdown;
   text-align: center;
   margin-left: 15vw;
   margin-right: 15vw;
+  font-family: 'Poppins';
 }
 
+.countdown h2{ color: black; }
 
 
+/* general styling */
 
 
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  
+  font-family: 'Poppins';
+}
 
+li span {
+  display: block;
+  font-size: 4.5rem;
+  font-family: 'Poppins';
+}
 
-
+@media all and (max-width: 768px) {
+  
+  li {
+    font-size: 1.5em;
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
 
 
 .description-lan{
@@ -949,6 +969,12 @@ color: black;
   color: black;
   margin-bottom: 3vh;
 }
+
+.links h2{
+  color: black;
+}
+
+
 
 
 /*---------- MOBILVERSION ----------*/
