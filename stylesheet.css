@@ -25,7 +25,6 @@ h4 { font-size: 1.25em; }
   h4 { font-size: 1.25em; }
 }
 
-.hero-img h1, .hero-img2 h1 { font-family: 'Raleway'; }
 
 
 
@@ -532,12 +531,8 @@ h4 { font-size: 1.25em; }
 }
 
 .hero-heading2 h1 {
-  margin-top: 10;
-}
-
-.hero-heading h1 {
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 10;
   line-height: 1;
   text-align: center;
 }
@@ -929,18 +924,6 @@ li span {
   font-family: 'Poppins';
 }
 
-@media all and (max-width: 768px) {
-  
-  li {
-    font-size: 1.5em;
-  }
-  
-  li span {
-    font-size: calc(3.375rem * var(--smaller));
-  }
-}
-
-
 .description-lan{
   grid-area: description-lan;
   margin-left: 15vw;
@@ -1166,5 +1149,13 @@ li span {
   .description-links, .links{
     margin-left: 10vw;
     margin-right: 10vw;
+  }
+
+  li {
+    font-size: 1.5em;
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
   }
 }
