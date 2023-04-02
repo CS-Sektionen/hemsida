@@ -517,7 +517,7 @@ h4 { font-size: 1.25em; }
     "nav-links"
     "hero-heading2";
   grid-area: hero-img2;
-  background: url(images/hero-nyastudenter.png) 50%/cover no-repeat;
+  background: url(images/hero-nyastudenter.webp) 50%/cover no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 85vh;
   width: 100vw;
@@ -626,7 +626,7 @@ h4 { font-size: 1.25em; }
     "nav-links"
     "hero-heading3";
   grid-area: hero-img3;
-  background: url(images/Styrelsen.png) 50%/cover no-repeat;
+  background: url(images/Styrelsen.webp) 50%/cover no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 85vh;
   width: 100vw;
@@ -814,7 +814,7 @@ color: black;
     "nav-links"
     "hero-heading4";
   grid-area: hero-img4;
-  background: url(images/hero-dokument.png) 50%/cover no-repeat;
+  background: url(images/hero-dokument.webp) 50%/cover no-repeat;
   ;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 85vh;
@@ -886,7 +886,7 @@ color: black;
     "nav-links"
     "hero-heading5";
   grid-area: hero-img5;
-  background: url(images/DSC_1979.jpg) 50%/cover no-repeat;
+  background: url(images/DSC_1979.webp) 50%/cover no-repeat;
   ;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 85vh;
