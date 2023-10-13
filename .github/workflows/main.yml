@@ -21,10 +21,10 @@ jobs:
     name: Push files
     steps:
       - name: Get latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
           # ftp server
           server: ftpcluster.loopia.se
