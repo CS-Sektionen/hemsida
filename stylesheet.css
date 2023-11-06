@@ -781,8 +781,9 @@ color: black;
   opacity: 0.8;
 }
 
-
-
+.board-img {
+    border-radius: 50%;
+}
 
 
 
