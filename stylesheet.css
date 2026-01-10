@@ -322,7 +322,7 @@ h4 { font-size: 1.25em; }
   grid-template-areas:
     "social-media-heading social-media-heading"
     "social-media-fb social-media-ig"
-    "social-media-discord social-media-orbi";
+    "social-media-discord social-media-hitract";
   grid-area: social-media;
   background-color: #15004F;
   padding-top: 5vh;
@@ -342,7 +342,7 @@ h4 { font-size: 1.25em; }
 }
 
 .social-media-fb, .social-media-discord { padding-left: 10vw; }
-.social-media-orbi, .social-media-ig { padding-right: 10vw; }
+.social-media-hitract, .social-media-ig { padding-right: 10vw; }
 
 .social-media-fb {
   grid-area: social-media-fb;
@@ -417,29 +417,24 @@ h4 { font-size: 1.25em; }
 
 
 
-.social-media-orbi {
-  grid-area: social-media-orbi;
+.social-media-hitract {
+  grid-area: social-media-hitract;
   display: grid;
   grid-template-columns: 0.2fr 1fr;
   grid-template-rows: 0fr 0fr;
   gap: 0px 2vw;
   grid-auto-flow: row;
   grid-template-areas:
-    "logo-orbi orbi-heading"
-    "logo-orbi orbi-link";
+    "logo-hitract hitract-heading"
+    "logo-hitract hitract-link";
 }
-.logo-orbi {
-  grid-area: logo-orbi;
-}
-.logo-orbi {
-  max-width: 40px;
-}
-.orbi-heading {
-  grid-area: orbi-heading;
+
+.hitract-heading {
+  grid-area: hitract-heading;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
-.orbi-link { grid-area: orbi-link; }
+.hitract-link { grid-area: hitract-link; }
 
 .contact {
   display: grid;
@@ -1029,7 +1024,7 @@ li span {
       "social-media-fb"
       "social-media-ig"
       "social-media-discord"
-      "social-media-orbi";
+      "social-media-hitract";
     padding-left: 10vw;
     padding-right: 10vw;
     width: 80vw;
@@ -1038,9 +1033,9 @@ li span {
   .social-media-heading { grid-area: social-media-heading; }
 
   .social-media-fb, .social-media-discord { padding-left: 0vw; }
-  .social-media-orbi, .social-media-ig { padding-right: 0vw;}
+  .social-media-hitract, .social-media-ig { padding-right: 0vw;}
 
-  .social-media-fb, .social-media-discord, .social-media-orbi, .social-media-ig {
+  .social-media-fb, .social-media-discord, .social-media-hitract, .social-media-ig {
     padding-left: 10vw;
     padding-right: 10vw;
   }
