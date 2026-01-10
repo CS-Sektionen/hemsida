@@ -429,6 +429,12 @@ h4 { font-size: 1.25em; }
     "logo-hitract hitract-link";
 }
 
+.logo-hitract {
+  grid-area: logo-hitract;
+  font-size: 40px;
+  color: white;
+}
+
 .hitract-heading {
   grid-area: hitract-heading;
   margin-block-start: 0em;
