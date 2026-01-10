@@ -625,7 +625,7 @@ h4 { font-size: 1.25em; }
     "nav-links"
     "hero-heading3";
   grid-area: hero-img3;
-  background: url(images/StyrelsenPlaceholder.webp) 50%/cover no-repeat;
+  /* background: url(images/StyrelsenPlaceholder.webp) 50%/cover no-repeat; */
   background-color: #15004F;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .50);
   height: 85vh;
