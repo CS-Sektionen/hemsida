@@ -37,6 +37,7 @@ export function Footer() {
           </a>
         </div>
         <p>Webbdesign: Emma Edlund, Irma Eljenmyr</p>
+        <p>© 2026 CS-sektionen. All Rights Reserved.</p>
       </div>
 
       <div className="footer-links" id="program-links">
