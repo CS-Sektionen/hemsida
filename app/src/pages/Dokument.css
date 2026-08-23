@@ -1,0 +1,333 @@
+#computer-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  	align-items: center;
+	height: auto;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+#computer-frame {
+	position: relative;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+	width: 90%;
+	height: 900px;
+	border: 6vw solid var(--khaki);
+	border-top-width: 18vh;
+	border-bottom-width: 20vh;
+	border-radius: 5px;
+	background-color: black;
+	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.474);
+	overflow: hidden;
+}
+
+#computer-frame::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: repeating-linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.15),
+		rgba(0, 0, 0, 0.15) 1px,
+		transparent 1px,
+		transparent 2px
+	);
+	pointer-events: none;
+}
+
+#computer-screen {
+	width: 100%;
+	height: 100%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-image: radial-gradient(rgba(120, 120, 120, 0.05), black 180%), url(/Images/windows-xp.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-shadow: 0 0 5px #C8C8C8;
+	border-radius: 3px;
+	cursor: url('/Images/High-Res_XP_Icons/Cursor_arrow.png'), auto;
+	
+}
+
+#folder-grid {
+	position: relative;
+	display: grid;
+	grid-gap: 30px 5px;
+    grid-auto-columns: 80px;
+    grid-template-rows: repeat(auto-fill, 80px);
+	grid-auto-flow: column;
+	margin: 20px;
+	height: 80%;
+	width: 80%;
+	overflow: hidden;
+}
+
+.folder-button {
+	background-color: transparent;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 80px;
+	width: 80px;
+	cursor: url('/Images/High-Res_XP_Icons/Cursor_hand.png'), auto;
+	margin: 10px;
+}
+
+.folder-button > p{
+	font-family: "Tahoma";
+	font-size: 12px;
+	line-height: 100%;
+	text-shadow:rgb(1, 1, 1) 0px 1px 1px, rgb(0, 0, 0) 0px 0px 4px;
+	margin: 1vh;
+}
+
+#computer-footer {
+	position: absolute;
+	width: 100%;
+	height: 6vh;
+	background-image: linear-gradient(rgb(54, 60, 228) 5%, rgb(123, 127, 255), 15%, rgb(54, 60, 228) 90%);
+	bottom: 0;
+	display: block;
+}
+
+#computer-footer img{
+	position: relative;
+	left: 0.5vw;
+	top: 1vh;
+	height: 4vh;
+	width: auto;
+}
+
+#post-it {
+    position: absolute;
+    bottom: -15vw;        /* ✅ sticks to the bottom border of the frame */
+    right: 0;
+    width: 15vw;
+    height: 14vw;
+    background-color: #f5f56a;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+    padding: 10px;
+    transform: rotate(3deg);  /* ✅ slight tilt for realism */
+    z-index: 1;
+}
+
+#post-it p{
+	font-family: 'Bad Script';
+	font-size: 1.3vw;
+    color: #333;
+}
+
+/*___________________Terminal________________*/
+
+  /* ── Desktop icon ── */
+    .terminal-icon {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: transparent;
+		border: none;
+		height: 80px;
+		width: 80px;
+		cursor: url('/Images/High-Res_XP_Icons/Cursor_hand.png'), auto;
+		margin: 10px;
+		user-select: none;
+    }
+    .terminal-icon svg { width: 60px; height: 60px; }
+	.terminal-icon p {
+		font-family: "Tahoma";
+		font-size: 12px;
+		line-height: 100%;
+		text-shadow:rgb(1, 1, 1) 0px 1px 1px, rgb(0, 0, 0) 0px 0px 4px;
+		margin: 1vh;
+	}
+
+/* ── Window shell ── */
+	.window-wrap {
+      position: absolute; 
+	  inset: 0;
+      display: flex; 
+	  align-items: center; 
+	  justify-content: center;
+	  pointer-events: none;
+    }
+	
+    .window {
+      width: 500px;
+      border: 2px solid #00008b;
+      box-shadow:
+        1px 1px 0 #fff inset,
+        4px 4px 16px rgba(0,0,0,0.7);
+      background: #0a0a0a;
+      resize: both;
+      overflow: hidden;
+      min-width: 380px;
+      min-height: 100px;
+    }
+
+	.window-wrap .window {
+		pointer-events: auto;
+	}
+ 
+    /* ── Title bar ── */
+    .titlebar {
+      background: linear-gradient(
+        to bottom,
+        #1f5ebe 0%, #3b7de3 4%,
+        #2d6de0 49%, #1756cd 50%,
+        #1450c0 100%
+      );
+      padding: 3px 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-bottom: 1px solid #0a3a8a;
+    }
+ 
+    .titlebar-icon {
+      width: 16px; height: 16px; flex-shrink: 0;
+    }
+ 
+    .titlebar-title {
+      font-size: 11px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+      font-family: 'Tahoma', sans-serif;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+ 
+    .titlebar-buttons { display: flex; gap: 2px; }
+ 
+    .titlebar-btn {
+      width: 21px; height: 21px;
+      border: 1px solid rgba(255,255,255,0.3);
+      cursor:  url('/Images/High-Res_XP_Icons/Cursor_hand.png'), auto;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+      background: linear-gradient(to bottom,
+        #5594e8 0%, #3b7de3 40%,
+        #2b6dd3 50%, #1a5ec4 100%);
+      box-shadow: 1px 1px 0 rgba(255,255,255,0.3) inset;
+      user-select: none;
+    }
+ 
+    .titlebar-btn:hover {
+      background: linear-gradient(to bottom,
+        #78b0f5 0%, #5a9af0 40%,
+        #4a8ae0 50%, #3a7ad0 100%);
+    }
+ 
+    .titlebar-btn.close {
+      background: linear-gradient(to bottom,
+        #e05f5f 0%, #c03030 40%,
+        #b02020 50%, #901010 100%);
+    }
+    .titlebar-btn.close:hover {
+      background: linear-gradient(to bottom,
+        #f07070 0%, #d04040 40%,
+        #c03030 50%, #a01010 100%);
+    }
+ 
+    /* ── Terminal output area ── */
+    .terminal {
+      background: #0a0a0a;
+      color: #c0c0c0;
+      font-family: 'Lucida Console', 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 4px 6px;
+      height: 300px;
+      overflow-y: auto;
+      outline: none;
+    }
+ 
+    /* XP-style scrollbar */
+    .terminal::-webkit-scrollbar { width: 16px; }
+    .terminal::-webkit-scrollbar-track {
+      background: #c0c0c0;
+      border-left: 1px solid #808080;
+    }
+    .terminal::-webkit-scrollbar-thumb {
+      background: #a0a0a0;
+      border: 1px solid #404040;
+      box-shadow: 1px 1px 0 #fff inset, -1px -1px 0 #808080 inset;
+    }
+ 
+    .output-line {
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+ 
+    /* ── Active input row ── */
+    .input-line {
+      display: flex;
+      align-items: flex-start;
+    }
+ 
+    .prompt {
+      color: #c0c0c0;
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-family: 'Lucida Console', 'Courier New', monospace;
+      font-size: 13px;
+    }
+ 
+    .cmd-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #c0c0c0;
+      font-family: 'Lucida Console', 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.4;
+      flex: 1;
+      caret-color: #c0c0c0;
+      width: 100%;
+    }
+
+	#terminal, #output, #prompt {
+		user-select: none;        /* prevents accidental text selection */
+		cursor: text;
+	}
+
+	@media only screen and (max-width: 750px) {
+	#computer-frame {
+		border-left: none;
+		border-right: none;
+		width: 100%;
+		height: 500px;
+	}
+
+	#keyboard, #post-it {
+		display: none;
+	}
+	
+	#folder-grid {
+		width: fit-content;
+		height: 90%;
+		row-gap: 10vh;
+	}
+
+	.terminal-icon {
+		display: none;
+	}
+}

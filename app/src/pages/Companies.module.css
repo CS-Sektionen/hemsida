@@ -1,0 +1,165 @@
+/*---------- GENERAL ----------*/
+/*
+*  Ändringar i de globala standardreglerna
+*/
+.page {
+	display: contents;
+}
+
+.heading-frame {
+	background-image: linear-gradient(0deg, rgba(8, 3, 22, 0.80) 0%, rgba(8, 3, 22, 0.80) 100%), url(/Images/styrelse-bilder/placeholder.jpg);
+}
+
+.heading-card {
+	padding: 4rem clamp(1rem, 10vw, 8rem) 10rem clamp(1rem, 10vw, 8rem);
+	max-width: 80%;
+}
+
+.heading-card-content > h1 {
+	white-space: nowrap;
+}
+
+.heading-card-content > h2 {
+	color: var(--lt-blue);
+	font-size: clamp(5px, 2vw, 20px);
+}
+
+.info-ruta {
+	display: grid;
+	gap: 5px;
+}
+
+.program-card {
+	width: 60vw;
+	place-self: center;
+	grid-template-columns: 1fr;
+	margin-top: 6rem;
+	margin-bottom: 5rem;
+}
+
+
+@media only screen and (max-width: 750px) {
+	.heading-card {
+		padding: 5rem clamp(1rem, 10vw, 8rem) 8rem clamp(1rem, 10vw, 8rem);
+		height: auto;
+		max-width: 100%;
+		justify-content: center;
+	}
+
+	.heading-card-content {text-align: center;}
+
+	.heading-card-content > h2 {font-size: clamp(1em, 4vw, 1.5em);}
+}
+
+.page main {
+	display: flex;
+	flex-direction: column;
+	row-gap: 70px;
+	margin-top: 0;
+}
+
+.page h2 {
+	padding: 0;
+	line-height: 30px;
+}
+
+.program-card {
+	display: grid;
+	grid-template-columns: 1fr;
+	place-self: center;
+	min-width: 0;
+}
+
+.page p {
+	margin-bottom: 30px;
+}
+
+
+/*---------- NÅ MEDLEMMAR ----------*/
+/*
+*  Texten om att nå ut till medlemmar
+*/
+
+.våra-medlemmar > p {
+	width: 60%;
+}
+
+
+/*---------- TABELL ----------*/
+/*
+*  Inställningar för tabellen
+*/
+
+.tabell-text {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.tabell-text > p {
+	width: 60%;
+}
+
+.page table {
+	width: 100%;
+	text-align: center;
+}
+
+.page table th {
+	font-family: 'Tilt warp';
+	border-bottom: 2px solid var(--border-blue);
+}
+
+.page table td {
+	font-family: 'Poppins';
+	height: 3em;
+	border-bottom: 1px solid var(--border-blue);
+}
+
+.line-cell {
+	border-left: 1px solid var(--border-blue);
+	border-right: 1px solid var(--border-blue);;
+}
+
+
+/*---------- KONTAKTA ARBETSMARKNAD ----------*/
+/*
+*  Inställningar för text + knapp
+*/
+
+.contact-text > p {
+	width: 60%;
+	margin: 0;
+}
+
+.small-info-card {
+	width: 20rem;
+	min-width: 13vw;
+	place-self: center;
+	align-content: center;
+	padding: 15px;
+	margin-top: 40px;
+}
+
+.table-scroll {
+	width: 100%;
+	min-width: 0;
+}
+
+@media only screen and (max-width: 750px) {
+	.våra-medlemmar > p,
+	.tabell-text > p,
+	.contact-text > p {
+		width: 100%;
+	}
+
+	.page table {
+		table-layout: fixed;
+		width: 100%;
+	}
+
+	.page table th,
+	.page table td {
+		word-break: break-word;
+	}
+}

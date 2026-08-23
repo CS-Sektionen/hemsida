@@ -1,0 +1,42 @@
+.folder-card {
+	width: 260px;
+	flex: 0 0 260px;
+	height: 160px;
+	padding: 1.25rem;
+	justify-content: center;
+}
+
+.role {
+	color: var(--lt-blue);
+	font-size: 0.85em;
+	font-weight: 400;
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.name {
+	margin: 0.3rem 0;
+	width: 100%;
+	line-height: 1.15;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.email {
+	font-size: 0.85em;
+	text-decoration: underline;
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.email:hover {
+	color: var(--link-blue);
+}

@@ -1,0 +1,48 @@
+.heading-frame {
+	background-image: linear-gradient(0deg, rgba(8, 3, 22, 0.80) 0%, rgba(8, 3, 22, 0.80) 100%), url(/Images/nystudent.jpg);
+	background-position: 100% 20%;
+}
+
+.heading-card {
+	padding: 4rem clamp(1rem, 10vw, 8rem) 10rem clamp(1rem, 10vw, 8rem);
+	max-width: 80%;
+}
+
+.heading-card-content > h1 {
+	white-space: nowrap;
+}
+
+.heading-card-content > h2 {
+	color: var(--lt-blue);
+	font-size: clamp(5px, 2vw, 20px);
+}
+
+.checklist-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.checklist-container h3 {
+	font-size: 30px;
+	color: var(--lt-blue);
+}
+
+.text-link {
+	margin: 0;
+	font-size: 1em;
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 750px) {
+	.heading-card {
+		padding: 5rem clamp(1rem, 10vw, 8rem) 8rem clamp(1rem, 10vw, 8rem);
+		height: auto;
+		max-width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.heading-card-content {text-align: center;}
+
+	.heading-card-content > h2 {font-size: clamp(1em, 4vw, 1.5em);}
+}

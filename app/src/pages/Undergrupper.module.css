@@ -1,0 +1,107 @@
+/*---------- RUBRIK ----------*/
+
+.heading-frame {
+	background-image: linear-gradient(0deg, rgba(8, 3, 22, 0.80) 0%, rgba(8, 3, 22, 0.80) 100%), url(/Images/lanet2024.jpg);
+	background-position: center 75%;
+}
+
+.heading-card {
+	padding: 4rem clamp(1rem, 10vw, 8rem) 10rem clamp(1rem, 10vw, 8rem);
+	max-width: 80%;
+}
+
+.heading-card-content > h1 {
+	white-space: nowrap;
+}
+
+.heading-card-content > h2 {
+	color: var(--lt-blue);
+	font-size: clamp(5px, 2vw, 20px);
+}
+
+/*---------- UNDERGRUPPER ----------*/
+/*
+*  Inställningar för undergrupper
+*/
+.befintliga-undergrupper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 70px;
+}
+
+.undergrupp {
+	display: flex;
+	flex-direction: row;
+	column-gap: 75px;
+	align-self: center;
+	justify-self: center;
+	width: 90%;
+}
+
+.undergrupp > img {
+	max-width: 13rem;
+	align-self: center;
+}
+
+.undergrupp-text {
+	max-width: 55rem;
+	min-width: 15rem;
+}
+
+.projektledare-section {
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+}
+
+.projektledare-cards {
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+}
+
+.skapa-undergrupp {
+	display: grid;
+	gap: 5px;
+}
+
+.program-card {
+	width: 60vw;
+	place-self: center;
+	grid-template-columns: 1fr;
+	margin-top: 6rem;
+	margin-bottom: 5rem;
+}
+
+
+/*---------- FÖR MOBIL ----------*/
+/*
+*  Inställningar för undergrupper på mobilen
+*/
+
+@media only screen and (max-width: 750px) {
+
+	.heading-card {
+		padding: 5rem clamp(1rem, 10vw, 8rem) 8rem clamp(1rem, 10vw, 8rem);
+		height: auto;
+		max-width: 100%;
+		justify-content: center;
+	}
+
+	.heading-card-content {text-align: center;}
+
+	.heading-card-content > h2 {font-size: clamp(1em, 4vw, 1.5em);}
+
+	.undergrupp {
+		flex-direction: column;
+	}
+
+	.undergrupp > img {
+		max-width: 15rem;
+		align-self: center;
+	}
+
+	.undergrupp-text > h2 {
+		justify-self: center;
+	}
+}

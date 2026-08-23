@@ -1,0 +1,149 @@
+.collapsible-item {
+	display: flex;
+    flex-direction: column;
+	height: auto;
+    border-bottom: 1px solid var(--border-blue);
+    cursor: pointer;
+	padding: 1rem 0;
+	transition: background-color 0.3s ease;
+}
+
+.collapsible-active {
+	display: flex;
+    justify-content: space-between;
+	height: auto;
+	transform-origin: top;
+}
+
+.collapsible-active div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 2em;
+}
+
+.collapsible-active img {
+	filter: invert(100%);
+	width: 2rem;
+}
+
+.active img {
+	transform: rotate(180deg);
+}
+
+.collapsible-content {
+	position: relative;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto;
+	gap: 4rem;
+	max-width: 100%;
+	cursor: auto;
+	overflow: hidden;
+	padding-bottom: 0;
+	padding-top: 2rem;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.checkbox-container {
+    flex: 0 0 35px;
+    display: block;
+	position: relative;
+    place-items: center;
+    font-size: 1.25rem;
+    height: 35px;
+    width: 35px;
+	align-self: center;
+	cursor: pointer;
+	border: 2px solid var(--lt-blue);
+	border-radius: 8px;
+	background-color: var(--dark-purple);
+	font-size: 22px;
+	user-select: none;
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.checkbox-container input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+	border-radius: 3px;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.checkbox-container input:hover ~ .checkmark {
+	background-color: rgba(140, 181, 254, 0.15);
+	border-radius: 5px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+	background-color: var(--lt-blue);
+	border-radius: 5px;
+}
+
+.checkmark svg {
+	width: 65%;
+	height: 65%;
+	transform: scale(0);
+	transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.checkbox-container input:checked ~ .checkmark svg {
+	transform: scale(1);
+}
+
+.collapsible-content img {
+	width: 60vw;
+	height: 30vh;
+	object-fit: cover;
+	border-radius: 7px;
+}
+
+@media only screen and (max-width: 750px) {
+	.collapsible-item {
+		padding: 1rem 0;
+	}
+	
+	.collapsible-active img {
+		width: 1.5rem;
+	}
+
+	.collapsible-active div h2 {
+		font-size: clamp(1em, 4vw, 1.5em);
+	}
+
+	.checkbox-container {
+		flex: 0 0 25px;
+		font-size: 1rem;
+		height: 25px;
+		width: 25px;
+	}
+
+	.collapsible-content {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 2rem;
+		padding-top: 0;
+	}
+
+	.collapsible-content img {
+		width: 100%;
+		height: auto;
+	}
+}

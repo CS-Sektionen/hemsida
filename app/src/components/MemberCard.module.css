@@ -1,0 +1,139 @@
+.styrelse-h4 {
+	color: var(--lt-blue);
+	font-size: 2em;
+	margin: 0;
+	margin-bottom: 2px;
+	overflow-wrap: break-word;
+}
+
+.styrelse-h3 {
+	color: var(--white);
+	font-size: 1.75em;
+	text-align: center;
+	line-height: 1;
+}
+
+.square-text {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	align-self: center;
+	margin-bottom: 10px;
+}
+
+.styrelse-mail {
+	font-size: 0.85em;
+	font-weight: 100;
+	font-family: 'Tilt Warp';
+	text-decoration: underline;
+	align-self: center;
+	justify-self: center;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.styrelse-mail:hover {
+	color: var(--link-blue);
+}
+
+.program-card {
+	display: flex;
+	flex-direction: row;
+	padding: 4rem 0;
+	column-gap: 60px;
+	width: 100%;
+	min-width: 0;
+}
+
+.bild-rubrik {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.bild-rubrik > h4 {
+	justify-self: center;
+	line-height: 1;
+	margin-bottom: 0;
+	margin-top: 1rem;
+}
+
+.bild-rubrik > img {
+	width: 15rem;
+	height: 15rem;
+	border-radius: 50%;
+	border: 2px solid var(--border-blue);
+	justify-self: center;
+	object-fit: cover;
+}
+
+.read-more {
+	visibility: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+	.program-card {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.square-text {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	:global(.program-card).program-card {
+		width: 100%;
+		margin: 0.5rem auto;
+		padding: 2rem 1.5rem;
+		border-radius: 10px;
+		border-left: 2px solid var(--border-blue);
+		border-right: 2px solid var(--border-blue);
+	}
+
+	.long-role {
+		font-size: 1.5em;
+	}
+
+	.desc-wrapper {
+		position: relative;
+		max-height: 6.6em;
+		overflow: hidden;
+		transition: max-height 0.35s ease;
+	}
+
+	.desc-wrapper.expanded {
+		max-height: 1000px;
+	}
+
+	.desc-wrapper:not(.expanded)::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 2.2em;
+		background: linear-gradient(to bottom, transparent, var(--dark-purple));
+		pointer-events: none;
+	}
+
+	.read-more {
+		visibility: visible;
+		align-self: center;
+		margin-top: 0.6rem;
+		padding: 0;
+		background: none;
+		border: none;
+		color: var(--lt-blue);
+		font-family: 'Tilt Warp';
+		font-size: 0.9em;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	.read-more:hover {
+		color: var(--link-blue);
+	}
+}
