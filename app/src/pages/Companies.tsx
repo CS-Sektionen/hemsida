@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Companies.module.css';
 import { Reveal } from '../components/Reveal';
 
@@ -31,9 +32,9 @@ export function Companies() {
                 Denna sida är under utveckling och kommer snart att innehålla mer information om hur företag kan samarbeta med CS-sektionen.
               </p>
             </div>
-            <a className="filled-button" href="/kontakt#styrelse" hrefLang="sv">
+            <Link className="filled-button" to="/kontakt#styrelsen" hrefLang="sv">
               Kontaktuppgifter
-            </a>
+            </Link>
           </div>
         </Reveal>
         { /**

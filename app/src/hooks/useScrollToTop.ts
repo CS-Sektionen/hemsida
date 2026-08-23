@@ -1,10 +1,15 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { scrollToId } from './useScrollToId';
 
 export function useScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      scrollToId(hash);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 }

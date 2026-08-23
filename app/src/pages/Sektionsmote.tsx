@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Sektionsmote.module.css';
 import { Reveal } from '../components/Reveal';
 
@@ -64,9 +65,9 @@ export function Sektionsmote() {
               att bilda en ny undergrupp eller ge mer ekonomiskt stöd till något evenemang.
             </p>
             <div className="info-text__buttons">
-              <a className="filled-button" href="/kontakt#motioner">
+              <Link className="filled-button" to="/kontakt#motioner">
                 Lämna en motion
-              </a>
+              </Link>
             </div>
           </div>
           <div className="info-text">
