@@ -14,6 +14,7 @@ export function Layout() {
         <Outlet />
         <Footer />
       </div>
+      <p className="copyright">&copy; {new Date().getFullYear()} CS-sektionen. All Rights Reserved.</p>
     </>
   );
 }

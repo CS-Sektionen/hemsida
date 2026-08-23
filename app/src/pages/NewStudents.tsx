@@ -155,11 +155,11 @@ const items = [
     title: 'Ovvar',
     text: (
       <p>
-        Kallas även för studentoverall och det är ett traditionsenligt studentplagg som bärs på campus på tisdagar
-        eller vid speciella tillfällen. Datavetenskaps ovvar är ljusblåa och Interaktion &amp; Designs är
-        khaki-färgade. Detta kan vara bra att känna till för att hitta till rätt program första dagen! När du väl
-        får din ovve syr du på ditt namn på höger ben och några valfria märken, sedan är det bara din kreativitet
-        som hindrar dig i vad du gör med den.
+        Kallas även för studentoverall och det är ett traditionsenligt studentplagg som bärs på campus på tisdagar, 
+        vid speciella tillfällen eller när man vill. Datavetenskaps ovvar är ljusblåa där DV urskiljer sig med lila revär 
+        och Interaktion & Designs är khaki-färgade. Detta kan vara bra att känna till för att hitta till rätt program första dagen! 
+        När du väl får din ovve syr du på ditt namn på höger ben och några valfria märken, sedan är det bara din kreativitet som hindrar 
+        dig i vad du gör med den.
       </p>
     ),
     image: <img src="/Images/dataovvar.jpeg" alt="dataovvar" />,
