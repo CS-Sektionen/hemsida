@@ -9,6 +9,16 @@
     <link href="https://fonts.googleapis.com/css?family=Tilt%20Warp" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Bad Script" rel="stylesheet" />
     <title>CS-sektionen</title>
+    <script>
+      // Restores the real path after 404.html redirected here, before
+      // React Router reads the URL. See public/404.html for the other half.
+      (function () {
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p) {
+          window.history.replaceState(null, '', '/' + decodeURIComponent(p));
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

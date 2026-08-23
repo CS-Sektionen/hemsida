@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/Images/CS-logga.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS-sektionen</title>
+    <script>
+      // Redirects deep links through the SPA's index.html so client-side
+      // routing can take over, since this static host has no server-side
+      // rewrite support. Based on the spa-github-pages technique:
+      // https://github.com/rafgraph/spa-github-pages
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.host + '/?p=' +
+        encodeURIComponent(l.pathname.slice(1) + l.search + l.hash)
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
