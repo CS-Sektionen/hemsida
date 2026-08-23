@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 import { Carousel } from '../components/Carousel';
 import { Reveal } from '../components/Reveal';
@@ -132,7 +133,7 @@ export function Home() {
             <h2>Kontakt</h2>
             <p>
               Beroende på vad ditt ärende gäller så finns det olika sätt att ta kontakt med oss. Kontaktuppgifter
-              till samtliga styrelsemedlemmar hittar du <a href="/kontakt" className="in-text-link">här</a>. Är du osäker på vem du ska kontakta kan du alltid
+              till samtliga styrelsemedlemmar hittar du <Link to="/kontakt" className="in-text-link">här</Link>. Är du osäker på vem du ska kontakta kan du alltid
               skicka ett DM på instagram, alternativ kontakta kommunikationsutskottet för vidare hänvisning.
             </p>
           </div>
@@ -147,7 +148,7 @@ export function Home() {
             </div>
             <div className="small-info-card">
               <h3>Styrelsen</h3>
-              <a href="/styrelsen">Styrelsens infosida</a>
+              <Link to="/styrelsen">Styrelsens infosida</Link>
             </div>
             <div className="small-info-card">
               <h3>Övrigt</h3>
