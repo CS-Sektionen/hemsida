@@ -2,15 +2,6 @@ import styles from './Undergrupper.module.css';
 import { MemberCard } from '../components/MemberCard';
 import { Reveal } from '../components/Reveal';
 
-const loremIpsum = (
-  <>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tortor nisi, vel viverra metus
-    sollicitudin nec. Vestibulum lectus dui, vulputate ac sapien vitae, sagittis congue mi. Aliquam et condimentum
-    dui. Phasellus ut nulla purus. Aliquam quis dolor malesuada, mattis dolor non, accumsan diam. Maecenas
-    eleifend hendrerit tortor ut fringilla.
-  </>
-);
-
 const projektledare = [
   {
     image: '/Images/styrelse-bilder/vice.jpg',
