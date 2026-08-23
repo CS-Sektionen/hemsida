@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Undergrupper.module.css';
 import { MemberCard } from '../components/MemberCard';
 import { Reveal } from '../components/Reveal';
@@ -130,9 +131,9 @@ export function Undergrupper() {
                 stöd sektionen kan ge dig.
               </p>
             </div>
-            <a className="filled-button" href="/kontakt">
+            <Link className="filled-button" to="/kontakt#styrelsen">
               Kontaktuppgifter
-            </a>
+            </Link>
           </div>
         </Reveal>
       </main>
