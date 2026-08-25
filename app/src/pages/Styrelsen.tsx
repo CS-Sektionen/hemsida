@@ -39,7 +39,7 @@ const categories: Category[] = [
         description: (
           <>
             Hej, jag heter Ture och är ordförande för CS-sektionen. Jag går 3:e året på ID och har tidigare varit ID-ego i styrelsen.
-            Utöver sektionsarbete så jobbar jag ofta på Origo, eller syr fler märken på min ovve (hittils 300 märken).            
+            Utöver sektionsarbete så jobbar jag ofta på Origo, eller syr fler märken på min ovve (hittils över 300 märken).            
             <br />
             <br />
             Som ordförande är det mitt ansvar att leda styrelsen och se till att sektionen fungerar som den ska. 
@@ -128,7 +128,7 @@ const categories: Category[] = [
         ),
       },
       {
-        image: '/Images/styrelse-bilder-2025/lukas.jpg',
+        image: '/Images/styrelse-bilder/manar.jpg',
         imageAlt: 'Kommunikationsutskottet',
         name: 'Manar Al-Latifi',
         email: 'kommunikation@cssektionen.se',
@@ -144,13 +144,15 @@ const categories: Category[] = [
         ),
       },
       {
-        image: '/Images/styrelse-bilder-2025/lukas.jpg',
+        image: '/Images/styrelse-bilder/elias.jpg',
         imageAlt: 'studiesociala utskottet',
         name: 'Elias Svensson',
         email: 'studiesocial@cssektionen.se',
         role: 'Studiesociala utskottet',
         description: (
           <>
+            Hej, jag heter Elias och ansvarar för de studiesociala utskottet på CS-sektionen. Jag pluggar 3:e året C och har tidigare varit general för datas inspark. 
+            I övrigt gillar jag att klättra och pyssla med datarelaterade grejer :)
             <br />
             <br />
             Jag ansvarar kring studiesociala frågor såsom evenemang och aktiviteter men även mobbning, lärare som felbehandlar studenter, diskriminering

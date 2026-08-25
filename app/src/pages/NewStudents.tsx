@@ -114,7 +114,7 @@ const items = [
       <p>
         Kårhuset Origo drivs av NTK och är ett av flera kårhus. Ett kårhus är studenternas uteställe men anordnar 
         ibland även andra event så som pluggkvällar och liknande. Just Origo är beläget alldeles bredvid campus (0.0.0) och som medlem i NTK får du rabatterat inträde. 
-        Det är öppet mycket under mottagningen, och annars är det öppet för pub på tisdagar samt nattklubb fredag och lördagar. Origo drivs av studenter för studenter.
+        Det är öppet mycket under mottagningen, och annars är det öppet för pub på tisdagar samt nattklubb fredagar och lördagar. Origo drivs av studenter för studenter.
       </p>
     ),
     image: <img src="/Images/Kårhuset_Origo.jpg" alt="Kårhuset origo" />,

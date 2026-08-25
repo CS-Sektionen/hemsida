@@ -797,12 +797,12 @@ footer {
 		padding: 0.7rem clamp(1px, 2vw, 20px);
 		width: 100%;
 		max-width: 100%;
-		z-index: 10;
+		z-index: 11;
 	}
 
 	.sidebar {
         position: fixed;
-        z-index: 0;
+        z-index: 5;
         height: calc(100% - 56px);
         width: 100%;
         top: 56px;

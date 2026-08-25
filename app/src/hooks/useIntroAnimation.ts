@@ -47,6 +47,12 @@ export function useIntroAnimation() {
             opacity: [0, 1],
             duration: 500,
             easing: 'easeInOutQuint',
+            complete: () => {
+              document.querySelectorAll<HTMLElement>('.navbar-wide, .navbar-resp').forEach((el) => {
+                el.style.opacity = '';
+                el.style.transform = '';
+              });
+            },
           },
           '-=590'
         );

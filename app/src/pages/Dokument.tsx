@@ -114,7 +114,7 @@ export function Dokument() {
                 className={`small-info-card ${styles['document-card']}`}
               >
                 <img src={folder.icon} alt={folder.alt} />
-                <span>{folder.label.replace(/- /g, ' ')}</span>
+                <span>{folder.label.replace(/- /g, '')}</span>
               </a>
             ))}
             <h3>Tips: Gå in på denna sida på en dator!</h3>

@@ -55,6 +55,7 @@
 	color: var(--white);
 	font-family: 'Tilt Warp';
 	font-size: 1.1em;
+	white-space: nowrap;
 }
 
 @media only screen and (max-width: 750px) {
