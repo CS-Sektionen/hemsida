@@ -24,7 +24,7 @@ const folders = [
     label: 'Stadgar',
   },
   {
-    href: 'https://drive.google.com/file/d/1mpTTlN1ULU13OgS9k8W1iT-fgosDbnzA/view?usp=sharing',
+    href: 'https://drive.google.com/file/d/1MmYpHC2xazI4A0OJcwEvCIu28qYJahB_/view?usp=sharing',
     icon: '/Images/High-Res_XP_Icons/File.ico',
     alt: 'Reglemente',
     label: 'Reglemente',
