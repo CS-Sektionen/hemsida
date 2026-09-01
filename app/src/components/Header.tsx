@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const navSections = [
@@ -26,8 +26,10 @@ type HeaderProps = {
 
 export function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
 
-  function toggleDropdown(index: number) {
+  function toggleDropdown(index: number, trigger: HTMLButtonElement) {
+    triggerRef.current = trigger;
     setOpenDropdown((current) => (current === index ? null : index));
   }
 
@@ -35,25 +37,49 @@ export function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
     setOpenDropdown(null);
   }
 
+  // Stänger öppen dropdown vid Escape eller klick någon annanstans. Ligger på
+  // document eftersom en meny ska gå att stänga även när fokus lämnat headern.
+  useEffect(() => {
+    if (openDropdown === null) return;
+
+    function handlePointerDown(e: MouseEvent) {
+      // Knappen som öppnade menyn stänger den själv via sin onClick.
+      if (triggerRef.current?.contains(e.target as Node)) return;
+      closeAll();
+    }
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key !== 'Escape') return;
+      closeAll();
+      triggerRef.current?.focus();
+    }
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [openDropdown]);
+
   return (
-    <header onClick={closeAll}>
+    <header>
       <nav className="navbar-wide">
         <ul className="header-list1">
           {navSections.map((section, index) => (
             <li key={section.label}>
               <button
                 className={`navitem-has-children ${openDropdown === index ? 'active' : ''}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleDropdown(index);
-                }}
+                aria-expanded={openDropdown === index}
+                aria-controls={`dropdown-wide-${index}`}
+                onClick={(e) => toggleDropdown(index, e.currentTarget)}
               >
                 {section.label}
                 <img src="/Images/line-angle-down-icon.svg" alt="" />
               </button>
               <ul
+                id={`dropdown-wide-${index}`}
                 className={`navitem-children ${openDropdown === index ? 'active' : ''}`}
-                onClick={(e) => e.stopPropagation()}
               >
                 {section.items.map((item) => (
                   <li className="navitem-has-no-children" key={item.to}>
@@ -89,17 +115,16 @@ export function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
               <li key={section.label}>
                 <button
                   className={`navitem-has-children ${openDropdown === index ? 'active' : ''}`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleDropdown(index);
-                  }}
+                  aria-expanded={openDropdown === index}
+                  aria-controls={`dropdown-resp-${index}`}
+                  onClick={(e) => toggleDropdown(index, e.currentTarget)}
                 >
                   {section.label}
                   <img src="/Images/line-angle-down-icon.svg" alt="" />
                 </button>
                 <ul
+                  id={`dropdown-resp-${index}`}
                   className={`navitem-children ${openDropdown === index ? 'active' : ''}`}
-                  onClick={(e) => e.stopPropagation()}
                 >
                   {section.items.map((item) => (
                     <li className="navitem-has-no-children" key={item.to}>
