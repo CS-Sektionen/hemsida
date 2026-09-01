@@ -75,13 +75,13 @@ export function Home() {
         <Reveal className="program-card">
           <Carousel
             slides={[
-              <div className="program-image-content">
+              <div className="program-image-content" key="c">
                 <img src="/Images/c.png" alt="logga" />
               </div>,
-              <div className="program-image-content">
+              <div className="program-image-content" key="dv">
                 <img src="/Images/dv.png" alt="logga" />
               </div>,
-              <div className="program-image-content">
+              <div className="program-image-content" key="id">
                 <img src="/Images/id.png" alt="logga" />
               </div>,
             ]}
