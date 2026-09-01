@@ -66,7 +66,7 @@ export function Home() {
             <p>
               Varje år börjar ett gäng nya studenter på något av programmen under CS-sektionen, och vi ser till att
               alla ska få det bästa välkomnandet genom en tre veckors mottagning. Kanske är du en ny student? På
-              sidan "Ny student" har vi sammanställt saker som är bra att ha koll på när du börjar.
+              sidan &rdquo;Ny student&rdquo; har vi sammanställt saker som är bra att ha koll på när du börjar.
             </p>
           </div>
           <img src="/Images/dammplasket.jpg" alt="Dammplasket i campusdammen" />
