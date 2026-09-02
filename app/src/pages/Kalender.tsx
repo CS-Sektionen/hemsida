@@ -38,11 +38,11 @@ export function Kalender() {
         <Reveal className={`program-card ${styles['program-card']}`}>
           {isDesktop ? (
           <div className={`calendar-container ${styles['calendar-container']}`}>
-            <iframe src="https://calendar.google.com/calendar/embed?src=b8041d0e0099a5fb78c104e23fdfef4746befb9ad33b139e95a0c781dcf3350d%40group.calendar.google.com&ctz=Europe%2FStockholm" style={{ border: '0' }} width="800" height="600"></iframe>
+            <iframe title="Kalender" src="https://calendar.google.com/calendar/embed?src=b8041d0e0099a5fb78c104e23fdfef4746befb9ad33b139e95a0c781dcf3350d%40group.calendar.google.com&ctz=Europe%2FStockholm" style={{ border: '0' }} width="800" height="600"></iframe>
           </div>
           ) : (
           <div className={`calendar-container ${styles['calendar-container']}`}>
-            <iframe src="https://calendar.google.com/calendar/u/0/newembed?src=b8041d0e0099a5fb78c104e23fdfef4746befb9ad33b139e95a0c781dcf3350d@group.calendar.google.com&ctz=Europe/Stockholm" style={{ border: '0' }} width="400" height="600"></iframe>
+            <iframe title="Kalender" src="https://calendar.google.com/calendar/u/0/newembed?src=b8041d0e0099a5fb78c104e23fdfef4746befb9ad33b139e95a0c781dcf3350d@group.calendar.google.com&ctz=Europe/Stockholm" style={{ border: '0' }} width="400" height="600"></iframe>
           </div>
           )}
         </Reveal>

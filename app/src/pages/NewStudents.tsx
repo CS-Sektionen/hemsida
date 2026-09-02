@@ -89,7 +89,7 @@ const items = [
     text: (
       <p>
         Kurslitteratur kan vara dyrt att köpa nytt så ett tips är att köpa i andra hand. Bland annat kan du kolla på
-        NTK's kurslitteraturtorg och i andra facebookgrupper. Studentapan är en hemsida för att köpa begagnat
+        NTK&rsquo;s kurslitteraturtorg och i andra facebookgrupper. Studentapan är en hemsida för att köpa begagnat
         kurslitteratur. Du kan även höra med dina äldrekursare om de har böcker att sälja, vilka som är relevanta,
         men även om de har anteckningar eller sammanfattningsdokument att dela med sig av.
       </p>
