@@ -17,6 +17,11 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+:focus-visible {
+	outline: 3px solid var(--link-blue);
+	outline-offset: 2px;
+}
+
 html {
 	margin: 0;
 	padding: 0;
@@ -342,6 +347,16 @@ header {
 	border: 2px solid var(--purple);
 	z-index: 15;
 	transition: width 0.2s, height 0.2s, border-color 0.3s ease-in-out;
+}
+
+/* Ritar egen outline för loggan så den faktiskt är rund */
+.home-logo:has(:focus-visible) {
+	outline: 3px solid var(--link-blue);
+	outline-offset: 4px;
+}
+
+.logo-link:focus-visible {
+	outline: none;
 }
 
 .logo-link span{
@@ -785,6 +800,9 @@ footer {
 	.navbar-wide {display: none;}
 
 	.navbar-resp {
+		--navbar-padding: 0.7rem;
+		--hamburger-size: 44px;
+		--header-height: calc(var(--hamburger-size) + 2 * var(--navbar-padding) + 2px);
 		position: fixed;
         display: grid;
         grid-template-columns: auto;
@@ -794,7 +812,7 @@ footer {
         grid-template-areas: "openbtn . contact";
 		background-color: var(--dark-purple);
 		border-bottom: 2px solid var(--purple);
-		padding: 0.7rem clamp(1px, 2vw, 20px);
+		padding: var(--navbar-padding) clamp(1px, 2vw, 20px);
 		width: 100%;
 		max-width: 100%;
 		z-index: 11;
@@ -803,9 +821,9 @@ footer {
 	.sidebar {
         position: fixed;
         z-index: 5;
-        height: calc(100% - 56px);
         width: 100%;
-        top: 56px;
+        top: var(--header-height);
+        bottom: 0;
         right: 0;
         background-color: var(--dark-purple);
         overflow-x: visible;
@@ -835,6 +853,10 @@ footer {
 		border-bottom: 2px solid var(--border-blue);
 		border-radius: 0;
 		overflow: hidden;
+	}
+
+	.sidebar :focus-visible {
+		outline-offset: -3px;
 	}
 
 	.sidebar .navitem-has-no-children {
@@ -913,14 +935,14 @@ footer {
 		justify-content: center;
 		align-items: center;
 		gap: 7px;
-		width: 32px;
-		height: 32px;
+		width: var(--hamburger-size);
+		height: var(--hamburger-size);
 		cursor: pointer;
 		background: none;
 		border: none;
-		margin: 0px;
+		margin: 0;
+		margin-right: 3vw;
 		padding: 0;
-		padding-right: 3vw;
 		grid-area: contact;
 		justify-self: end;
 	}

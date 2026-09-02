@@ -10,11 +10,11 @@ export function Layout() {
     <>
       <HomeLogo setSidebarOpen={setSidebarOpen} />
       <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-      <div className="container">
+      <div className="container" inert={sidebarOpen}>
         <Outlet />
         <Footer />
       </div>
-      <p className="copyright">&copy; {new Date().getFullYear()} CS-sektionen. All Rights Reserved.</p>
+      <p className="copyright" inert={sidebarOpen}>&copy; {new Date().getFullYear()} CS-sektionen. All Rights Reserved.</p>
     </>
   );
 }

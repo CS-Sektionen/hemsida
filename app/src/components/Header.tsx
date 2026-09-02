@@ -27,6 +27,7 @@ type HeaderProps = {
 export function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const hamburgerRef = useRef<HTMLButtonElement | null>(null);
 
   function toggleDropdown(index: number, trigger: HTMLButtonElement) {
     triggerRef.current = trigger;
@@ -37,12 +38,13 @@ export function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
     setOpenDropdown(null);
   }
 
-  // Stänger öppen dropdown vid Escape eller klick någon annanstans. Ligger på
-  // document eftersom en meny ska gå att stänga även när fokus lämnat headern.
+  // Stänger öppen dropdown eller sidomeny vid Escape eller klick någon annanstans.
+  // Ligger på document eftersom en meny ska gå att stänga även när fokus lämnat headern.
   useEffect(() => {
-    if (openDropdown === null) return;
+    if (openDropdown === null && !sidebarOpen) return;
 
     function handlePointerDown(e: MouseEvent) {
+      if (openDropdown === null) return;
       // Knappen som öppnade menyn stänger den själv via sin onClick.
       if (triggerRef.current?.contains(e.target as Node)) return;
       closeAll();
@@ -50,8 +52,13 @@ export function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
 
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key !== 'Escape') return;
-      closeAll();
-      triggerRef.current?.focus();
+      if (openDropdown !== null) {
+        closeAll();
+        triggerRef.current?.focus();
+        return;
+      }
+      setSidebarOpen(false);
+      hamburgerRef.current?.focus();
     }
 
     document.addEventListener('mousedown', handlePointerDown);
@@ -60,7 +67,7 @@ export function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
       document.removeEventListener('mousedown', handlePointerDown);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [openDropdown]);
+  }, [openDropdown, sidebarOpen, setSidebarOpen]);
 
   return (
     <header>
@@ -109,7 +116,23 @@ export function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
       </nav>
 
       <nav className="navbar-resp">
-        <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <button
+          className={`hamburger ${sidebarOpen ? 'open' : ''}`}
+          ref={hamburgerRef}
+          onClick={() => {
+            setSidebarOpen((prev) => !prev);
+            closeAll();
+          }}
+          aria-controls="mobile-sidebar"
+          aria-label={sidebarOpen ? 'Stäng meny' : 'Öppna meny'}
+          aria-expanded={sidebarOpen}
+        >
+          <span className="bar" />
+          <span className="bar" />
+          <span className="bar" />
+        </button>
+
+        <div id="mobile-sidebar" className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
           <ul className="header-list">
             {navSections.map((section, index) => (
               <li key={section.label}>
@@ -158,18 +181,6 @@ export function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
             </li>
           </ul>
         </div>
-
-        <button
-          className={`hamburger ${sidebarOpen ? 'open' : ''}`}
-          onClick={() => setSidebarOpen((prev) => !prev)}
-          aria-label={sidebarOpen ? 'Stäng meny' : 'Öppna meny'}
-          aria-expanded={sidebarOpen}
-        >
-          <span className="bar" />
-          <span className="bar" />
-          <span className="bar" />
-        </button>
-
       </nav>
     </header>
   );
