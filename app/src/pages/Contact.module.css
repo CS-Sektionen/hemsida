@@ -100,7 +100,6 @@
 }
 
 .page input:not([type='submit']):focus, .page select:focus, .page textarea:focus {
-	outline: none;
 	border-color: var(--lt-blue);
 }
 
