@@ -137,6 +137,7 @@
 		align-items: center;
 		background-color: transparent;
 		border: none;
+		padding: 0;
 		height: 80px;
 		width: 80px;
 		cursor: url('/Images/High-Res_XP_Icons/Cursor_hand.png'), auto;
@@ -213,6 +214,10 @@
  
     .titlebar-btn {
       width: 21px; height: 21px;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: inherit;
+      line-height: normal;
       border: 1px solid rgba(255,255,255,0.3);
       cursor:  url('/Images/High-Res_XP_Icons/Cursor_hand.png'), auto;
       font-size: 12px;

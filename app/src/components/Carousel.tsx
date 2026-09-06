@@ -52,7 +52,7 @@ export function Carousel({ slides }: CarouselProps) {
   return (
     <>
       <div className={`${styles['carousel-container']} ${styles['carousel-desktop']}`}>
-        <button className={styles.prev} onClick={() => goTo(current - 1)} />
+        <button aria-label="Föregående" className={styles.prev} onClick={() => goTo(current - 1)} />
         <div
           ref={trackRef}
           className={styles['carousel-track']}
@@ -68,7 +68,7 @@ export function Carousel({ slides }: CarouselProps) {
             </div>
           ))}
         </div>
-        <button className={styles.next} onClick={() => goTo(current + 1)} />
+        <button aria-label="Nästa" className={styles.next} onClick={() => goTo(current + 1)} />
       </div>
 
       <div className={styles['carousel-mobile']}>

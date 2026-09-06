@@ -15,15 +15,19 @@ export function Collapsible({ title, children, image }: CollapsibleProps) {
 
   return (
     <div className={styles['collapsible-item']}>
-      <div
-        className={`${styles['collapsible-active']} ${open ? styles.active : ''}`}
-        onClick={() => setOpen((o) => !o)}
-      >
-        <div>
-          <img src="/Images/line-angle-down-icon.svg" />
-          <h2>{title}</h2>
-        </div>
-        <label className={styles['checkbox-container']} onClick={(e) => e.stopPropagation()}>
+      <div className={`${styles['collapsible-active']} ${open ? styles.active : ''}`}>
+        <h2 className={styles['collapsible-heading']}>
+          <button
+            type="button"
+            className={styles['collapsible-trigger']}
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            <img src="/Images/line-angle-down-icon.svg" alt="" />
+            {title}
+          </button>
+        </h2>
+        <label className={styles['checkbox-container']} aria-label="Markera som klar">
           <input
             type="checkbox"
             checked={checked}

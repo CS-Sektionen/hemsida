@@ -376,7 +376,7 @@ export function Terminal({ screenRef }: TerminalProps) {
 
   return (
     <>
-      <div className="terminal-icon" onClick={openWin}>
+      <button type="button" className="terminal-icon" onClick={openWin}>
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="3" width="30" height="24" rx="1" fill="#000080" />
           <rect x="2" y="4" width="28" height="22" fill="#0000c0" />
@@ -388,7 +388,7 @@ export function Terminal({ screenRef }: TerminalProps) {
           <rect x="4" y="22" width="10" height="2" fill="#808080" />
         </svg>
         <p>Command Prompt</p>
-      </div>
+      </button>
       <div className="window-wrap">
         <div className="window" id="win" ref={winRef} style={{ display: open ? '' : 'none' }}>
           <div className="titlebar">
@@ -403,19 +403,19 @@ export function Terminal({ screenRef }: TerminalProps) {
             </svg>
             <span className="titlebar-title">C:\WINDOWS\system32\cmd.exe</span>
             <div className="titlebar-buttons">
-              <div className="titlebar-btn" title="Minimize" onClick={closeWin}>
+              <button type="button" className="titlebar-btn" title="Minimize" onClick={closeWin}>
                 _
-              </div>
-              <div className="titlebar-btn" title="Maximize" onClick={maximizeWin}>
+              </button>
+              <button type="button" className="titlebar-btn" title="Maximize" onClick={maximizeWin}>
                 &#9633;
-              </div>
-              <div className="titlebar-btn close" title="Close" onClick={closeWin}>
+              </button>
+              <button type="button" className="titlebar-btn close" title="Close" onClick={closeWin}>
                 &#10005;
-              </div>
+              </button>
             </div>
           </div>
 
-          <div className="terminal" id="terminal" ref={termRef} onClick={focusInput}>
+          <div className="terminal" id="terminal" ref={termRef} role="presentation" onClick={focusInput}>
             <div id="output">
               {lines.map((line, i) => (
                 <div className="output-line" key={i}>
