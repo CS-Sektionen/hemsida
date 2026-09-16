@@ -6,40 +6,46 @@ import { useIsDesktop } from '../hooks/useIsDesktop.ts';
 
 const folders = [
   {
-    href: 'https://drive.google.com/drive/folders/1peOaj3nHz2e2iC-mgPjXiBPUmBrSJYnA?usp=sharing',
+    href: 'https://drive.google.com/drive/folders/1-cmVgLf14crox7Jitd8yGbUqtaiL9IC4?usp=sharing',
     icon: '/Images/High-Res_XP_Icons/Folder Closed.ico',
     alt: 'Styrelsesammanträde',
     label: 'Styrelse- sammanträden',
   },
   {
-    href: 'https://drive.google.com/drive/folders/1lu-tczpqDbdeAbHi0Wh7rHpSqcAJ8zMz?usp=sharing',
+    href: 'https://drive.google.com/drive/folders/18nn8CXZPUMXxE5nWr9930r6BYqNYgvht?usp=sharing',
     icon: '/Images/High-Res_XP_Icons/Folder Closed.ico',
     alt: 'Stormöten',
     label: 'Stormöten',
   },
   {
-    href: 'https://drive.google.com/file/d/1U3fdo3mHEqjdeSW9fvyBmP_yBvjQfNJY/view?usp=sharing',
+    href: 'https://drive.google.com/file/d/1ifJDG6Tis3j0HITVYspPswnBHWLTixtI/view?usp=sharing',
     icon: '/Images/High-Res_XP_Icons/File.ico',
     alt: 'Stadgar',
     label: 'Stadgar',
   },
   {
-    href: 'https://drive.google.com/file/d/1MmYpHC2xazI4A0OJcwEvCIu28qYJahB_/view?usp=sharing',
+    href: 'https://drive.google.com/file/d/1wjCk8muc3VIJj-SLu_LN0sv3McVnLUcw/view?usp=sharing',
     icon: '/Images/High-Res_XP_Icons/File.ico',
     alt: 'Reglemente',
     label: 'Reglemente',
   },
   {
-    href: 'https://drive.google.com/drive/folders/1eAcasmS5rlIGwKqkcIXJJTwy5cL8qQD-?usp=sharing',
+    href: 'https://drive.google.com/drive/folders/1D-7AAxa5SShZ9lf0nW7WN6yVvMkwNmiq?usp=sharing',
     icon: '/Images/High-Res_XP_Icons/Folder%20Closed.ico',
     alt: 'Verksamhetsberättelser',
     label: 'Verksamhets- berättelser',
   },
   {
-    href: 'https://drive.google.com/drive/folders/1ks7k0F2veSk2Cv2vIPaY4-hx6bIdeYfy?usp=sharing',
+    href: 'https://drive.google.com/drive/folders/1seENi5IkYojOc9z5U_A4ocRklgCgvbzr?usp=sharing',
     icon: '/Images/High-Res_XP_Icons/Folder%20Closed.ico',
     alt: 'Arkiv',
     label: 'Arkiv',
+  },
+  {
+    href: 'https://drive.google.com/drive/folders/0B9hIrqCGZj9zb1R6d2NNeFd0Mnc?resourcekey=0-eDOSiVA4_C86Rcp4E_Gcxg&usp=sharing',
+    icon: '/Images/High-Res_XP_Icons/Folder%20Closed.ico',
+    alt: 'Pluggmatrial',
+    label: 'Pluggmatrial',
   },
 ];
 

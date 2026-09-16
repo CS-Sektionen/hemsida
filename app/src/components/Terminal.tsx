@@ -12,12 +12,20 @@ const FS: Record<string, string[]> = {
     'Reglemente',
     'Verksamhetsberättelser',
     'Arkiv',
+    'Pluggmatrial'
   ],
   'C:\\Documents and Settings\\User\\Desktop\\Styrelsesammanträden': [],
   'C:\\Documents and Settings\\User\\Desktop\\Stormöten': [],
   'C:\\Documents and Settings\\User\\Desktop\\Verksamhetsberättelser': [],
   'C:\\Documents and Settings\\User\\Desktop\\Arkiv': [],
-  'C:\\Documents and Settings\\User\\My Documents': ['My Music', 'My Pictures', 'My Videos'],
+  'C:\\Documents and Settings\\User\\My Documents': [
+    'My Music', 
+    'My Pictures', 
+    'My Videos',
+  ],
+  'C:\\Documents and Settings\\User\\My Documents\\My Music': [],
+  'C:\\Documents and Settings\\User\\My Documents\\My Pictures': [],
+  'C:\\Documents and Settings\\User\\My Documents\\My Videos': [],
   'C:\\Documents and Settings\\All Users': ['Desktop', 'Documents', 'Start Menu'],
   'C:\\WINDOWS': ['system32', 'Fonts', 'Media', 'Help', 'inf', 'Prefetch'],
   'C:\\WINDOWS\\system32': ['cmd.exe', 'notepad.exe', 'calc.exe', 'explorer.exe', 'regedit.exe', 'mspaint.exe'],
@@ -26,12 +34,13 @@ const FS: Record<string, string[]> = {
 };
 
 const GoogleLinks: Record<string, string> = {
-  Styrelsesammanträden: 'https://drive.google.com/drive/folders/1peOaj3nHz2e2iC-mgPjXiBPUmBrSJYnA?usp=sharing',
-  Stormöten: 'https://drive.google.com/drive/folders/1lu-tczpqDbdeAbHi0Wh7rHpSqcAJ8zMz?usp=sharing',
-  Stadgar: 'https://drive.google.com/file/d/1U3fdo3mHEqjdeSW9fvyBmP_yBvjQfNJY/view?usp=sharing',
-  Reglemente: 'https://drive.google.com/file/d/1mpTTlN1ULU13OgS9k8W1iT-fgosDbnzA/view?usp=sharing',
-  Verksamhetsberättelser: 'https://drive.google.com/drive/folders/1eAcasmS5rlIGwKqkcIXJJTwy5cL8qQD-?usp=sharing',
-  Arkiv: 'https://drive.google.com/drive/folders/1ks7k0F2veSk2Cv2vIPaY4-hx6bIdeYfy?usp=sharing',
+  Styrelsesammanträden: 'https://drive.google.com/drive/folders/1-cmVgLf14crox7Jitd8yGbUqtaiL9IC4?usp=sharing',
+  Stormöten: 'https://drive.google.com/drive/folders/18nn8CXZPUMXxE5nWr9930r6BYqNYgvht?usp=sharing',
+  Stadgar: 'https://drive.google.com/file/d/1ifJDG6Tis3j0HITVYspPswnBHWLTixtI/view?usp=sharing',
+  Reglemente: 'https://drive.google.com/file/d/1wjCk8muc3VIJj-SLu_LN0sv3McVnLUcw/view?usp=sharing',
+  Verksamhetsberättelser: 'https://drive.google.com/drive/folders/1D-7AAxa5SShZ9lf0nW7WN6yVvMkwNmiq?usp=sharing',
+  Arkiv: 'https://drive.google.com/drive/folders/1seENi5IkYojOc9z5U_A4ocRklgCgvbzr?usp=sharing',
+  Pluggmatrial: 'https://drive.google.com/drive/folders/1seENi5IkYojOc9z5U_A4ocRklgCgvbzr?usp=sharing',
 };
 
 function isDir(p: string) {
@@ -170,11 +179,12 @@ export function Terminal({ screenRef }: TerminalProps) {
 
     switch (cmd) {
       case 'cd':
-      case 'chdir':
-        if (!args[0] || args[0] === '.') {
+      case 'chdir': {
+        const pathArg = args.join(' ');
+        if (!pathArg || pathArg === '.') {
           print(cwd);
         } else {
-          const target = resolvePath(args[0]);
+          const target = resolvePath(pathArg);
           if (isDir(target)) {
             const folderName = target.split('\\').pop() ?? '';
             if (GoogleLinks[folderName]) {
@@ -188,6 +198,7 @@ export function Terminal({ screenRef }: TerminalProps) {
           }
         }
         break;
+      }
 
       case 'dir': {
         const children = FS[cwd] || [];
