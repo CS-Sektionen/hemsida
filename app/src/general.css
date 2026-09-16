@@ -873,16 +873,18 @@ footer {
 		padding: 0 0.6rem 0 1.6rem;
 		max-height: 0;
 		overflow: hidden;
-		visibility: visible;
+		visibility: hidden;
 		opacity: 1;
 		background-color: transparent;
 		border: none;
-		transition: max-height 0.35s ease, padding 0.35s ease;
+		transition: max-height 0.35s ease, padding 0.35s ease, visibility 0ms ease 0.35s;
 	}
 
 	.sidebar .navitem-children.active {
 		max-height: 500px;
 		padding: 0 0.6rem 1.2rem 1.6rem;
+		visibility: visible;
+		transition-delay: 0ms;
 	}
 
 	.sidebar .navitem-children .navitem-has-no-children {
