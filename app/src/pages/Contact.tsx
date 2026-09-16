@@ -77,7 +77,7 @@ const categories = [
       },
       {
         name: 'Emma Edlund',
-        email: 'dataicssektionen@gmail.com',
+        email: 'dics@cssektionen.se',
         role: 'DiCS projektledare',
       },
        {
