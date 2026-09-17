@@ -10,12 +10,12 @@ const categories = [
     contact: [
       {
         name: 'Ture Åström Säfsten',
-        email: 'ordforande@cssektionen.se',
+        email: 'ordf@cssektionen.se',
         role: 'Ordförande',
       },
       {
         name: 'Cedric Strand',
-        email: 'kassor@cssektionen.se',
+        email: 'ekonomi@cssektionen.se',
         role: 'Kassör',
       },
       {
