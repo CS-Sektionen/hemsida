@@ -34,7 +34,7 @@ const categories: Category[] = [
         image: '/Images/styrelse-bilder/ordforande.jpg',
         imageAlt: 'ordförande',
         name: 'Ture Åström Säfsten',
-        email: 'ordforande@cssektionen.se',
+        email: 'ordf@cssektionen.se',
         role: 'Ordförande',
         description: (
           <>
@@ -55,7 +55,7 @@ const categories: Category[] = [
         image: '/Images/styrelse-bilder-2025/lukas.jpg',
         imageAlt: 'kassör',
         name: 'Cedric Strand',
-        email: 'kassor@cssektionen.se',
+        email: 'ekonomi@cssektionen.se',
         role: 'Kassör',
         description: (
           <>Jag heter Cedric och är kassör för sektionen. För tillfället pluggar jag mitt andra år på data. Om ni söker mig så finns jag oftast på Origo.
