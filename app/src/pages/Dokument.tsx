@@ -6,13 +6,13 @@ import { useIsDesktop } from '../hooks/useIsDesktop.ts';
 
 const folders = [
   {
-    href: 'https://drive.google.com/drive/folders/1-cmVgLf14crox7Jitd8yGbUqtaiL9IC4?usp=sharing',
+    href: 'https://drive.google.com/drive/folders/18nn8CXZPUMXxE5nWr9930r6BYqNYgvht?usp=sharing',
     icon: '/Images/High-Res_XP_Icons/Folder Closed.ico',
     alt: 'Styrelsesammanträde',
     label: 'Styrelse- sammanträden',
   },
   {
-    href: 'https://drive.google.com/drive/folders/18nn8CXZPUMXxE5nWr9930r6BYqNYgvht?usp=sharing',
+    href: 'https://drive.google.com/drive/folders/1-cmVgLf14crox7Jitd8yGbUqtaiL9IC4?usp=sharing',
     icon: '/Images/High-Res_XP_Icons/Folder Closed.ico',
     alt: 'Stormöten',
     label: 'Stormöten',

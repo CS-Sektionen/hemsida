@@ -34,8 +34,8 @@ const FS: Record<string, string[]> = {
 };
 
 const GoogleLinks: Record<string, string> = {
-  Styrelsesammanträden: 'https://drive.google.com/drive/folders/1-cmVgLf14crox7Jitd8yGbUqtaiL9IC4?usp=sharing',
-  Stormöten: 'https://drive.google.com/drive/folders/18nn8CXZPUMXxE5nWr9930r6BYqNYgvht?usp=sharing',
+  Styrelsesammanträden: 'https://drive.google.com/drive/folders/18nn8CXZPUMXxE5nWr9930r6BYqNYgvht?usp=sharing',
+  Stormöten: 'https://drive.google.com/drive/folders/1-cmVgLf14crox7Jitd8yGbUqtaiL9IC4?usp=sharing',
   Stadgar: 'https://drive.google.com/file/d/1ifJDG6Tis3j0HITVYspPswnBHWLTixtI/view?usp=sharing',
   Reglemente: 'https://drive.google.com/file/d/1wjCk8muc3VIJj-SLu_LN0sv3McVnLUcw/view?usp=sharing',
   Verksamhetsberättelser: 'https://drive.google.com/drive/folders/1D-7AAxa5SShZ9lf0nW7WN6yVvMkwNmiq?usp=sharing',
