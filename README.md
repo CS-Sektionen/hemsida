@@ -30,6 +30,8 @@ git pull
 git checkout -b fix/kort-beskrivning
 ```
 
+Varje pull request byggs och lintas automatiskt. Är bygget rött går den inte att merga.
+
 ## Publicering
 
 **Att merga `dev` → `main` publicerar sidan direkt.** GitHub Actions bygger och laddar
@@ -39,14 +41,16 @@ Använd alltid **merge commit** när du mergar `dev` → `main`. Aldrig squash e
 det får grenarna att glida isär permanent, och varje kommande release visar då upp gamla
 ändringar igen.
 
-Behöver du fixa något akut som redan ligger live, utgå från `main` och merga tillbaka
+Att `main` ligger en commit före `dev` efter en release är normalt — det är själva
+merge-commiten. **Merga aldrig tillbaka `main` in i `dev`** för att "synka" dem.
+
+Behöver du fixa något akut som redan ligger live, utgå från `dev` och publicera direkt
 efteråt:
 
 ```bash
-git checkout -b hotfix/kort-beskrivning main
-# fixa, pusha, PR mot main, merga → publiceras direkt
-
 git checkout dev
-git merge main   # annars försvinner fixen vid nästa release
-git push
+git pull
+git checkout -b hotfix/kort-beskrivning
+# fixa, pusha, PR mot dev, merga
+# därefter direkt: PR från dev till main, merga → publiceras
 ```
