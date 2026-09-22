@@ -2,10 +2,11 @@
 
 Hemsidan för CS-sektionen vid Umeå universitet — [cssektionen.se](https://cssektionen.se)
 
+Gamla hemsidan hittas vid - [legacy-cs-hemsida](https://github.com/CS-Sektionen/legacy-cs-hemsida)
+
 ## Struktur
 
 - `app/` — själva hemsidan (React + TypeScript + Vite). Det är här allt arbete sker.
-- `.legacy/` — den gamla HTML-sidan, sparad som legacy. Ligger inte live.
 
 ## Komma igång
 
